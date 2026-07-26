@@ -62,6 +62,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-shrink: 0;
+    z-index: 2; /* This is so it is in front of the falling flowers*/
 }
 
 .group-icon {
@@ -85,8 +86,116 @@ body {
     color: #3e4f45;
     text-align: center;
     white-space: nowrap;
+    
 
 }
+
+
+/* Flowers Falling*/
+.flowerfall {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none; 
+}
+
+.flowerfall.active {
+    opacity: 1;
+}
+
+.flower{
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    /* These help the images not get too extended and stay the size they should */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: flower-fall 6s linear infinite, wind 10s ease-in-out infinite;
+    top: -10%;
+    left: 10%;
+}
+
+/* This is so there are three different flowers falling off of the screen */
+.flower:nth-child(3n + 1) {
+    background-image: url('flower1.svg');
+}
+.flower:nth-child(3n + 2) {
+    background-image: url('flower2.svg');
+}
+.flower:nth-child(3n + 3) {
+    background-image: url('flower3.svg');
+}
+
+/* This is so that the flowers start at diff positions as well as more spread out  */
+.flower:nth-child(1) {
+    left: 25%;
+    animation-delay: 1s;
+  }
+  
+  .flower:nth-child(2) {
+    left: 85%;
+    animation-delay: 1.5s;
+  }
+  
+  .flower:nth-child(3) {
+    left: 30%;
+    animation-delay: 2s;
+  }
+  
+  .flower:nth-child(4) {
+    left: 65%;
+    animation-delay: 2.5s;
+  }
+  
+  .flower:nth-child(5) {
+    left: 25%;
+    animation-delay: 3s;
+  }
+  
+  .flower:nth-child(6) {
+    left: 95%;
+    animation-delay: 3.5s;
+  }
+  
+  .flower:nth-child(7) {
+    left: 55%;
+    animation-delay: 4s;
+  }
+  
+  .flower:nth-child(8) {
+    left: 10%;
+    animation-delay: 4.5s;
+  }
+  
+  .flower:nth-child(9) {
+    left: 70%;
+    animation-delay: 5s;
+  }
+  
+  .flower:nth-child(10) {
+    left: 20%;
+    animation-delay: 5.5s;
+  }
+
+
+  /* Has flowers fall from the top of the page */
+@keyframes flower-fall {
+    100% {
+        top: 100%;
+    }
+}
+
+/* Has the flowers move gently side to side when falling*/
+@keyframes wind {
+    50% {
+        transform: translateX(60px);
+    }
+}
+
 
 /* For use on real phones that I might need later on */
 /* Make a note in paper that I got this online */
