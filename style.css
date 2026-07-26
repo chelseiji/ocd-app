@@ -1,4 +1,114 @@
-/* not even using this just for setup */
+/* Reset some default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    background: #F5F1ED;           
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Makes the black phone outline shape for realism */
+/* Note in the paper that I got this online */
+.phone-frame {
+    width: 393px;
+    height: 852px;
+    background: #000000;
+    border-radius: 55px;
+    padding: 14px;
+    box-shadow: 
+        0 0 0 2px #3a3a3a,
+        0 0 0 6px #1a1a1a,
+        0 30px 80px rgba(0,0,0,0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background */
+.phone-screen {
+    background: #F5F1ED;           
+    border-radius: 44px;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* This has to do with the "pages" of the app */
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Added to the screen that is showing on the app */
+.screen.active {
+    display: flex;
+}
+
+/* Holds top svg */
+.svg-container {
+    width: 100%;
+    height: 262px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.group-icon {
+    width: 100%;
+    height: 262px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: top center;
+}
+
+/* The "ephemera" in the middle of the screen (Figma gave me this info)*/
+.app-title {
+    position: absolute;
+    bottom: 410px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 64px;
+    font-family: 'Quicksand', sans-serif;
+    /* This is to make it "regular" weight */
+    font-weight: 400;
+    color: #3e4f45;
+    text-align: center;
+    white-space: nowrap;
+
+}
+
+/* For use on real phones that I might need later on */
+/* Make a note in paper that I got this online */
+@media (max-width: 420px) {
+    body {
+        background: #000000;
+        padding: 0;
+    }
+    
+    .phone-frame {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    .phone-screen {
+        border-radius: 0;
+    }
+
+    .app-title {
+        font-size: 48px;
+        bottom: 410px;
+    }
 }

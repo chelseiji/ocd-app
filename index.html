@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCD App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <!-- The first screen thats shows up when the app opens -->
+            <div id="loading-screen" class="screen active">
+                <!-- SVG at the top of the screen -->
+                <div class="svg-container">
+                    <img class="group-icon" src="iconlarge-loading.svg" alt="svg loading image">
+                </div>
+                <!-- The text in the center of the loading screen-->
+                <h1 class="app-title">ephemera</h1>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
