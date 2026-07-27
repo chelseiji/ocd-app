@@ -16,8 +16,8 @@ body {
 /* Makes the black phone outline shape for realism */
 /* Note in the paper that I got this online */
 .phone-frame {
-    width: 393px;
-    height: 852px;
+    width: 407px;
+    height: 866px;
     background: #000000;
     border-radius: 55px;
     padding: 14px;
@@ -52,7 +52,18 @@ body {
 /* Added to the screen that is showing on the app */
 .screen.active {
     display: flex;
+    animation: fadeIn 0.8s;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* Holds top svg */
 .svg-container {
@@ -194,6 +205,101 @@ body {
     50% {
         transform: translateX(60px);
     }
+}
+
+
+/* Onboarding Pages info*/
+.skip-button{
+    position: absolute;
+    top: 26px;
+    left: 16px;
+    width: 56px;
+    height: 56px;
+}
+
+.progress-text{
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    top: 73px;
+    font-size: 12px;
+    font-weight: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Quicksand;
+    color: #333333;
+    text-align: center;
+}
+
+.progress-bar{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 97px;
+}
+
+.onboard-heading{
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    top: 137px;
+    font-size: 32px;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Quicksand;
+    color: #3E4F45;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.onboard-subheading{
+    position: absolute;
+    width: 317px;
+    height: 23px;
+    top: 233px;
+    font-size: 20px;
+    font-weight: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Quicksand;
+    color: #3e4f45;
+    text-align: center;
+    z-index: 2;
+}
+
+.onboard-image{
+    position: absolute;
+    width: 393px;
+    height: 716px;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.continue-button{
+    position: absolute;
+    width: 361px;
+    height: 48px;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    color: #fcfcfc;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-align: center;
+    line-height: 48px;
+    z-index: 2;
+}
+
+.continue-button:active{
+    background-color: #BBA892;
 }
 
 
