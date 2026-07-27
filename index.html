@@ -51,7 +51,41 @@
                 <div class="continue-button" onclick="showScreen('onboarding2')">
                     continue
                 </div>
-    </div>
+         </div>
+            <!-- Onboarding page 2 -->
+            <div id ="onboarding2" class="screen">
+                <!-- Onmouse is since the prototype is on a laptop, ontouch is so that it works if i put this on a phone -->
+            <img class="skip-button" src="skip-button.svg" alt="skip button"
+                    onmousedown="this.src='skip-button-pressed.svg'"
+                    onmouseup="this.src='skip-button.svg'"
+                    ontouchstart="this.src='skip-button-pressed.svg'"
+                    ontouchend="this.src='skip-icon.svg'">
+            <p class="progress-text">2/4</p>
+            <img class="progress-bar" src="progressbar2.svg" alt="progress bar">
+            <h2 class="onboard-heading">notice without pressure</h2>
+            <p class="onboard-subheading">track gently, learn about yourself</p>
+            <img class="onboard-image" src="onboarding-image2.png" alt="onboarding image">
+            <div class="continue-button" onclick="showScreen('onboarding3')">
+                continue
+            </div>
+        </div>
+            <!-- Onboarding page 3 -->
+            <div id ="onboarding3" class="screen">
+                <!-- Onmouse is since the prototype is on a laptop, ontouch is so that it works if i put this on a phone -->
+            <img class="skip-button" src="skip-button.svg" alt="skip button"
+                    onmousedown="this.src='skip-button-pressed.svg'"
+                    onmouseup="this.src='skip-button.svg'"
+                    ontouchstart="this.src='skip-button-pressed.svg'"
+                    ontouchend="this.src='skip-icon.svg'">
+            <p class="progress-text">3/4</p>
+            <img class="progress-bar" src="progressbar3.svg" alt="progress bar">
+            <h2 class="onboard-heading">a breath at any time</h2>
+            <p class="onboard-subheading">a meditation for any occasion</p>
+            <img class="onboard-image" src="onboarding-image3.png" alt="onboarding image">
+            <div class="continue-button" onclick="showScreen('onboarding3')">
+                continue
+            </div>
+        </div>
 
     <script src="script.js"></script>
 </body>
