@@ -52,7 +52,11 @@ body {
 /* Added to the screen that is showing on the app */
 .screen.active {
     display: flex;
-    animation: fadeIn 0.8s;
+}
+
+/* Addes this since I just want this effect to happen on the first page */
+#onboarding1.active {
+    animation: fadeIn 3s;
 }
 
 @keyframes fadeIn {
@@ -132,13 +136,13 @@ body {
 
 /* This is so there are three different flowers falling off of the screen */
 .flower:nth-child(3n + 1) {
-    background-image: url('flower1.svg');
+    background-image: url('images/flower1.svg');
 }
 .flower:nth-child(3n + 2) {
-    background-image: url('flower2.svg');
+    background-image: url('images/flower2.svg');
 }
 .flower:nth-child(3n + 3) {
-    background-image: url('flower3.svg');
+    background-image: url('images/flower3.svg');
 }
 
 /* This is so that the flowers start at diff positions as well as more spread out  */
