@@ -10,6 +10,8 @@
 <body>
     <div class="phone-frame">
         <div class="phone-screen">
+            <!-- Dynamic island to mimic that of an iphone-->
+            <div class="dynamic-island"></div>
             <!-- The first screen thats shows up when the app opens -->
             <div id="loading-screen" class="screen active">
                 <!-- SVG at the top of the screen -->
@@ -107,6 +109,29 @@
                 continue
             </div>
         </div>
+            <!-- Login/Signup Page-->
+            <div id="authentication" class="screen">
+
+                <img class="top-image" src="images/top-image.png" alt="">
+                <h2 class="auth-heading">join us now</h2>
+                <p class="auth-subheading">begin your reflection journey</p>
+                <div class="auth-button" onclick="showScreen('registration')">
+                    <img class="auth-button-icon" src="images/email-icon.svg" alt="">
+                    <span>continue with email</span>
+                </div>
+                <div class="auth-button" onclick="window.location.href='https://www.google.com'">
+                    <img class="auth-button-icon" src="images/google-icon.svg" alt="">
+                    <span>continue with google</span>
+                </div>
+                <div class="auth-button" onclick="window.location.href='https://www.apple.com'">
+                    <img class="auth-button-icon" src="images/apple-icon.svg" alt="">
+                    <span>continue with apple</span>
+                </div>
+                <div class="divider"></div>
+                <div class="signin-button" onclick="showScreen('signin')">
+                    have an account? <span class="signin-bold">sign in now</span>
+                </div>
+            </div>
 
         <!-- Skip Popup -->
         <div id="skip-popup" class="popup-overlay">

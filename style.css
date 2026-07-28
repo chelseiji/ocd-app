@@ -16,8 +16,8 @@ body {
 /* Makes the black phone outline shape for realism */
 /* Note in the paper that I got this online */
 .phone-frame {
-    width: 407px;
-    height: 866px;
+    width: 421px;
+    height: 880px;
     background: #000000;
     border-radius: 55px;
     padding: 14px;
@@ -29,6 +29,21 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* I wanted to add this dynamic island since it is similar to figma prototypes */
+/* and it was important in my design process */
+.dynamic-island {
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    border-radius: 100px;
+    z-index: 20;
+}
+
 
 /* Background */
 .phone-screen {
@@ -336,7 +351,7 @@ body {
     width: 238px;
     height: 257px;
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand';
     color: #3e4f45;
     background-color: #fcfcfc;
     border-radius: 20px;
@@ -403,7 +418,7 @@ body {
 .popup-buttons{
     position: absolute;
     width: 94px;
-    height: 30.5px; /* made this begger in code since it it looking smaller thn it was in figma*/
+    height: 30.5px; /* made this bigger in code since it it looking smaller thn it was in figma*/
     top: 201px;
     border-radius: 8px;
     font-size: 14px; /* same made it bigger so people could read it better*/
@@ -437,8 +452,124 @@ body {
 
 .popup-button-filled:active {
     background-color: #BBA892;
+    border: 2px solid #BBA892;
 }
 
+
+/* Login/Signup Page */
+
+.top-image{
+    position: absolute;
+    width: 100%;
+    height: 384px;
+    top: 40px;
+    object-fit: contain;
+}
+
+
+.auth-heading {
+    position: absolute;
+    width: 300px;
+    top: 423px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #3e4f45;
+    text-align: center;
+}
+
+.auth-subheading {
+    position: absolute;
+    width: 300px;
+    top: 470px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #3e4f45;
+    text-align: center;
+}
+
+.divider {
+    position: absolute;
+    top: 521px;
+    left: 45px;
+    width: 303px;
+    height: 1px;
+    border-top: 1px solid #dcd5c5;
+}
+
+
+/* Three green continue with buttons*/
+
+.auth-button {
+    position: absolute;
+    left: 16px;
+    width: 361px;
+    height: 48px;
+    border-radius: 15px;
+    background-color: #3e4f45;
+    color: #fcfcfc;
+    font-family: 'Quicksand';
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* space between each of them*/
+}
+
+.auth-button:active {
+    background-color: #5E7869;
+}
+
+.auth-button-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* distance of the buttons from the top of the page*/
+.auth-button:nth-of-type(1) { top: 567px; }
+.auth-button:nth-of-type(2) { top: 639px; }
+.auth-button:nth-of-type(3) { top: 711px; }
+
+/* Have an account sign in button*/
+
+.signin-button {
+    position: absolute;
+    width: 223px;
+    height: 27px;
+    top: 787px;
+    left: 85px;
+    border-radius: 8px;
+    border: 1.5px solid #7c6c5a;
+    background-color: transparent;
+    font-family: 'Quicksand';
+    font-size: 12px;
+    font-weight: 500;
+    color: #3e4f45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin-buttonn:active  {
+    background-color: #7c6c5a;
+    color: #fcfcfc;
+}
+
+.signin-bold{
+    font-weight: 600;
+    color: #7C6C5A;
+    margin-left: 4px;
+}
+
+.signin-buttonn:active .signin-bold {
+    color: #fcfcfc;
+}
 
 
 
