@@ -306,6 +306,141 @@ body {
     background-color: #BBA892;
 }
 
+/* Skip Button info fro onboarding slides*/
+
+/* Overlay in the back of the popup */
+
+.popup-overlay{
+    position: absolute;
+    display:none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(134, 99, 70, 0.27);
+    border-radius: 55px;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay.active{
+    display: flex;
+}
+
+/* White box popup */
+.white-box{
+    position: relative;
+    width: 238px;
+    height: 257px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #3e4f45;
+    background-color: #fcfcfc;
+    border-radius: 20px;
+
+}
+
+.box-shape{
+    position: absolute;
+    width: 238px;
+    height: 257px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Green rings at the top of the popup*/
+.green-rings{
+    position: absolute;
+    top: -42px;
+    left: 35px;
+    width:171px;
+    height: 167px;
+}
+
+/* Dark icon*/
+.popup-icon{
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    top: -42px;
+    left: 77px;
+    z-index: 1;
+}
+
+/* Text and icons for the popup*/
+.popup-heading{
+    position: absolute;
+    width: 202px;
+    height: 27px;
+    top: 98px;
+    left: 17px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Quicksand;
+    color: #3e4f45;
+}
+
+.popup-subtext{
+    position: absolute;
+    width: 175.3px;
+    height: 30px;
+    top: 129px;
+    left: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Quicksand;
+    color: #3e4f45;
+}
+
+/* Buttons at the bottom of the popup*/
+.popup-buttons{
+    position: absolute;
+    width: 94px;
+    height: 30.5px; /* made this begger in code since it it looking smaller thn it was in figma*/
+    top: 201px;
+    border-radius: 8px;
+    font-size: 14px; /* same made it bigger so people could read it better*/
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* outline style button*/
+.popup-button-outline {
+    left: 16px;
+    color: #7c6c5a;
+    border: 2px solid #7c6c5a;
+    background-color: transparent;
+}
+
+.popup-button-outline:active {
+    background-color: #7c6c5a;
+    color: #fcfcfc;
+}
+
+/* filled style button*/
+.popup-button-filled {
+    left: 128px;
+    color: #fcfcfc;
+    border: 2px solid #7c6c5a;
+    background-color: #7c6c5a;
+}
+
+.popup-button-filled:active {
+    background-color: #BBA892;
+}
+
+
+
 
 /* For use on real phones that I might need later on */
 /* Make a note in paper that I got this online */

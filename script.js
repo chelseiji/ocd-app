@@ -10,16 +10,33 @@ setTimeout(function() {
     showScreen('onboarding1');
 }, 6000);
 
-//changes the screen of the app thats active 
+//Changes the screen of the app thats active 
 function showScreen(screenNumber){
-    //elements in screen
+    //Elements in screen
     var allScreens = document.querySelectorAll('.screen');
 
-    //loop to go through each of the screens hide the ones i dont need to show
+    //Loop to go through each of the screens hide the ones i dont need to show
     for (var i =0; i < allScreens.length; i++){
         allScreens[i].classList.remove('active')
     }
 
-    //makes it so that only the active screen is shown 
+    //Makes it so that only the active screen is shown 
     document.getElementById(screenNumber).classList.add('active');
+}
+
+
+//Opens popups
+function openPopup() {
+    document.getElementById('skip-popup').classList.add('active');
+}
+
+// Closes the popup
+function closePopup() {
+    document.getElementById('skip-popup').classList.remove('active');
+}
+
+// Goes to authentication page
+function skipOnboarding() {
+    closePopup();
+    showScreen('authentication'); // change this 
 }

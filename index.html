@@ -42,7 +42,8 @@
                      onmousedown="this.src='images/skip-button-pressed.svg'"
                      onmouseup="this.src='images/skip-button.svg'"
                      ontouchstart="this.src='images/skip-button-pressed.svg'"
-                     ontouchend="this.src='images/skip-icon.svg'">
+                     ontouchend="this.src='images/skip-icon.svg'"
+                     onclick="openPopup()">
                 <p class="progress-text">1/4</p>
                 <img class="progress-bar" src="images/progressbar1.svg" alt="progress bar">
                 <h2 class="onboard-heading">your space to take a pause</h2>
@@ -59,7 +60,8 @@
                     onmousedown="this.src='images/skip-button-pressed.svg'"
                     onmouseup="this.src='images/skip-button.svg'"
                     ontouchstart="this.src='images/skip-button-pressed.svg'"
-                    ontouchend="this.src='images/skip-icon.svg'">
+                    ontouchend="this.src='images/skip-icon.svg'"
+                    onclick="openPopup()">
             <p class="progress-text">2/4</p>
             <img class="progress-bar" src="images/progressbar2.svg" alt="progress bar">
             <h2 class="onboard-heading">notice without pressure</h2>
@@ -76,7 +78,8 @@
                     onmousedown="this.src='images/skip-button-pressed.svg'"
                     onmouseup="this.src='images/skip-button.svg'"
                     ontouchstart="this.src='images/skip-button-pressed.svg'"
-                    ontouchend="this.src='images/skip-icon.svg'">
+                    ontouchend="this.src='images/skip-icon.svg'"
+                    onclick="openPopup()">
             <p class="progress-text">3/4</p>
             <img class="progress-bar" src="images/progressbar3.svg" alt="progress bar">
             <h2 class="onboard-heading">a breath at any time</h2>
@@ -93,16 +96,40 @@
                     onmousedown="this.src='images/skip-button-pressed.svg'"
                     onmouseup="this.src='images/skip-button.svg'"
                     ontouchstart="this.src='images/skip-button-pressed.svg'"
-                    ontouchend="this.src='images/skip-icon.svg'">
+                    ontouchend="this.src='images/skip-icon.svg'"
+                    onclick="openPopup()">
             <p class="progress-text">4/4</p>
             <img class="progress-bar" src="images/progressbar4.svg" alt="progress bar">
             <h2 class="onboard-heading">shift your focus and break the loop</h2>
             <p class="onboard-subheading">relaxing games to clear the mind</p>
             <img class="onboard-image" src="images/onboarding-image4.png" alt="onboarding image">
-            <div class="continue-button" onclick="showScreen('homepage')">
+            <div class="continue-button" onclick="showScreen('authentication')">
                 continue
             </div>
         </div>
+
+        <!-- Skip Popup -->
+        <div id="skip-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/popup-icon-arrow.svg" alt="">
+                <h3 class="popup-heading">skip?</h3>
+                <p class="popup-subtext">by skipping you will miss out on learning about the app</p>
+                <div class="popup-buttons popup-button-outline" onclick="closePopup()">
+                    <span>no</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="skipOnboarding()">
+                    <span>yes</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
