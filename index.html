@@ -133,7 +133,6 @@
                 </div>
             </div>
 
-
             <!-- Registration Page-->
             <div id="registration" class="screen">
                 <img class="registration-icon" src="images/registration-icon.svg" alt="">
@@ -154,11 +153,14 @@
                         <img class="eye-icon" src="images/eye-closed.svg" alt="show password" onclick="togglePassword('confirm-input', this)">
                     </div>
                 </div>
+                <!-- Need to make sure password and confirm are the same before continueing to the next page-->
                 <div class="reg-continue-button" id="send-button" onclick="Registration()">
                     <span>continue</span>
                 </div>
                 <div class="or-divider">
+                    <div class="or-line"></div>
                     <span>or</span>
+                    <div class="or-line"></div>
                 </div>
                 <div class="auth-button reg-google-button" onclick="window.location.href='https://www.google.com'">
                     <img class="auth-button-icon" src="images/google-icon.svg" alt="">
@@ -170,6 +172,53 @@
                 </div>
                 <div class="signin-button reg-signin-button" onclick="showScreen('signin')">
                     already have an account? <span class="signin-bold">sign in</span>
+                </div>
+            </div>
+
+
+            <!-- Sign in Page-->
+            <div id="signin" class="screen">
+                <img class="signin-icon" src="images/signin-icon.svg" alt="">
+                <h2 class="registration-heading">sign in</h2>
+                <div class="type-box">
+                    <div class="type-field">
+                        <label class="label">email</label>
+                        <input type="email" class="input-text" id="signin-email-input" placeholder="enter your email">
+                    </div>
+                    <div class="type-field">
+                        <label class="label">password </label>
+                        <input type="password" class="input-text" id="signin-password-input" placeholder="enter your password">
+                        <img class="eye-icon" src="images/eye-closed.svg" alt="show password" onclick="togglePassword('signin-password-input', this)">
+                    </div>
+                </div>
+                <div class="remember">
+                    <div class="remember-button" id="remember-pressed" onclick="Remember()">
+                        <div class="remember-filled"></div>
+                    </div>
+                    <span class="remember-text">remember me</span>
+                </div>
+                <div class="forgetpassword" onclick="showScreen('authentication')">
+                    <span class="forgot-password">forgot password?</span>
+                </div>
+                <!-- no authentification of password needed so it goes to the loadding screen before the homepage-->
+                <div class="reg-continue-button signin-continue-button" onclick="showScreen('loadingtohomepage')">
+                    <span>continue</span>
+                </div>
+                <div class="or-divider signin-or">
+                    <div class="or-line"></div>
+                    <span>or</span>
+                    <div class="or-line"></div>
+                </div>
+                <div class="auth-button signin-google-button" onclick="window.location.href='https://www.google.com'">
+                    <img class="auth-button-icon" src="images/google-icon.svg" alt="">
+                    <span>continue with google</span>
+                </div>
+                <div class="auth-button signin-apple-button" onclick="window.location.href='https://www.apple.com'">
+                    <img class="auth-button-icon" src="images/apple-icon.svg" alt="">
+                    <span>continue with apple</span>
+                </div>
+                <div class="signin-button signin-register-button" onclick="showScreen('registration')">
+                    don't have an account? <span class="signin-bold">register now</span>
                 </div>
             </div>
 

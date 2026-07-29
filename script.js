@@ -68,3 +68,7 @@ function Registration() {
     errorText.classList.remove('show');
     showScreen('termsandconditions');
 }
+
+function Remember() {
+    document.getElementById('remember-pressed').classList.toggle('checked');
+}
