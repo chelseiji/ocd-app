@@ -133,6 +133,46 @@
                 </div>
             </div>
 
+
+            <!-- Registration Page-->
+            <div id="registration" class="screen">
+                <img class="registration-icon" src="images/registration-icon.svg" alt="">
+                <h2 class="registration-heading">registration</h2>
+                <div class="type-box">
+                    <div class="type-field">
+                        <label class="label">email</label>
+                        <input type="email" class="input-text" id="email-input" placeholder="enter your email">
+                    </div>
+                    <div class="type-field">
+                        <label class="label">password <span class="access-denied" id="error">passwords do not match</span></label>
+                        <input type="password" class="input-text" id="password-input" placeholder="enter your password">
+                        <img class="eye-icon" src="images/eye-closed.svg" alt="show password" onclick="togglePassword('password-input', this)">
+                    </div>
+                    <div class="type-field">
+                        <label class="label">confirm password</label>
+                        <input type="password" class="input-text" id="confirm-input" placeholder="confirm your password">
+                        <img class="eye-icon" src="images/eye-closed.svg" alt="show password" onclick="togglePassword('confirm-input', this)">
+                    </div>
+                </div>
+                <div class="reg-continue-button" id="send-button" onclick="Registration()">
+                    <span>continue</span>
+                </div>
+                <div class="or-divider">
+                    <span>or</span>
+                </div>
+                <div class="auth-button reg-google-button" onclick="window.location.href='https://www.google.com'">
+                    <img class="auth-button-icon" src="images/google-icon.svg" alt="">
+                    <span>continue with google</span>
+                </div>
+                <div class="auth-button reg-apple-button" onclick="window.location.href='https://www.apple.com'">
+                    <img class="auth-button-icon" src="images/apple-icon.svg" alt="">
+                    <span>continue with apple</span>
+                </div>
+                <div class="signin-button reg-signin-button" onclick="showScreen('signin')">
+                    already have an account? <span class="signin-bold">sign in</span>
+                </div>
+            </div>
+
         <!-- Skip Popup -->
         <div id="skip-popup" class="popup-overlay">
             <div class="white-box">
