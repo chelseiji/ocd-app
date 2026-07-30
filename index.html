@@ -292,14 +292,20 @@
                 <h2 class="setup-heading">account setup</h2>
                 <p class="setup-subheading">choose an icon below or select your own image</p>
             
-                <div class="setup-image-carousel">
+                <div class="setup-image-carousel" id="setup-image-carousel">
                     <img class="setup-profile" src="images/profile-1.svg" alt="profile 1" onclick="selectProfile(this)">
                     <img class="setup-profile" src="images/profile-2.svg" alt="profile 2" onclick="selectProfile(this)">
                     <img class="setup-profile" src="images/profile-3.svg" alt="profile 3" onclick="selectProfile(this)">
                     <img class="setup-profile" src="images/profile-4.svg" alt="profile 4" onclick="selectProfile(this)">
                 </div>
-            
-            </div>
+
+                <div id="image-preview"></div>
+                <label class="add-image-button" for="choose-file">
+                    + add your own image
+                </label>
+                <input type="file" accept="image/*" id="choose-file" name="choose-file" style="display: none;">
+                            
+                </div>
 
         <!-- Skip Popup -->
         <div id="skip-popup" class="popup-overlay">

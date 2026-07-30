@@ -1,5 +1,6 @@
 console.log('using app');
 
+// LOADING
 //This is so that the flowers dont start falling instantly when users open the application
 setTimeout(function() {
     document.querySelector('.flowerfall').classList.add('active');
@@ -10,6 +11,7 @@ setTimeout(function() {
     showScreen('onboarding1');
 }, 6000);
 
+// ONBOARDING
 //Changes the screen of the app thats active 
 function showScreen(screenNumber){
     //Elements in screen
@@ -41,6 +43,7 @@ function skipOnboarding() {
     showScreen('authentication'); // change this 
 }
 
+// REGISTRATION
 // Changes the password form visible to not visible as well as the eyes
 function togglePassword(inputId, icon) {
     var input = document.getElementById(inputId);
@@ -73,6 +76,7 @@ function Remember() {
     document.getElementById('remember-pressed').classList.toggle('checked');
 }
 
+// TERMS AND CONDITIONS
 // Opens popup
 function openDisagreePopup() {
     document.getElementById('disagree-popup').classList.add('active');
@@ -88,6 +92,7 @@ function Agree() {
     showScreen('account-setup');
 }
 
+// ACCOUNT SETUP
 // slects the profile that the user clicks on
 function selectProfile(icon) {
     var allCircles = document.querySelectorAll('.setup-profile');
@@ -95,4 +100,26 @@ function selectProfile(icon) {
         allCircles[i].classList.remove('selected');
     }
     icon.classList.add('selected');
+}
+
+var chooseFile = document.getElementById("choose-file");
+var imgPreview = document.getElementById("image-preview");
+
+chooseFile.addEventListener("change", function () {
+    getImgData();
+});
+
+function getImgData() {
+    var files = chooseFile.files[0];
+    if (files) {
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(files);
+        fileReader.addEventListener("load", function () {
+            imgPreview.style.display = "block";
+            imgPreview.innerHTML = '<img src="' + this.result + '" class="setup-profile" onclick="selectProfile(this)" />';
+
+            var carousel = document.getElementById('setup-image-carousel');
+            carousel.insertBefore(imgPreview, carousel.firstChild);
+        });
+    }
 }
