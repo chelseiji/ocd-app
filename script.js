@@ -72,3 +72,18 @@ function Registration() {
 function Remember() {
     document.getElementById('remember-pressed').classList.toggle('checked');
 }
+
+// Opens popup
+function openDisagreePopup() {
+    document.getElementById('disagree-popup').classList.add('active');
+}
+
+// Closes popup when ok is pressed
+function closeDisagreePopup() {
+    document.getElementById('disagree-popup').classList.remove('active');
+}
+
+// Go to loading before the homescreen
+function Agree() {
+    showScreen('prehome-loading');
+}

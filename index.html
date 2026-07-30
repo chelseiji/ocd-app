@@ -121,11 +121,11 @@
                 </div>
                 <div class="auth-button" onclick="window.location.href='https://www.google.com'">
                     <img class="auth-button-icon" src="images/google-icon.svg" alt="">
-                    <span>continue with google</span>
+                    <span>continue with Google</span>
                 </div>
                 <div class="auth-button" onclick="window.location.href='https://www.apple.com'">
                     <img class="auth-button-icon" src="images/apple-icon.svg" alt="">
-                    <span>continue with apple</span>
+                    <span>continue with Apple</span>
                 </div>
                 <div class="divider"></div>
                 <div class="signin-button" onclick="showScreen('signin')">
@@ -164,11 +164,11 @@
                 </div>
                 <div class="auth-button reg-google-button" onclick="window.location.href='https://www.google.com'">
                     <img class="auth-button-icon" src="images/google-icon.svg" alt="">
-                    <span>continue with google</span>
+                    <span>continue with Google</span>
                 </div>
                 <div class="auth-button reg-apple-button" onclick="window.location.href='https://www.apple.com'">
                     <img class="auth-button-icon" src="images/apple-icon.svg" alt="">
-                    <span>continue with apple</span>
+                    <span>continue with Apple</span>
                 </div>
                 <div class="signin-button reg-signin-button" onclick="showScreen('signin')">
                     already have an account? <span class="signin-bold">sign in</span>
@@ -211,14 +211,71 @@
                 </div>
                 <div class="auth-button signin-google-button" onclick="window.location.href='https://www.google.com'">
                     <img class="auth-button-icon" src="images/google-icon.svg" alt="">
-                    <span>continue with google</span>
+                    <span>continue with Google</span>
                 </div>
                 <div class="auth-button signin-apple-button" onclick="window.location.href='https://www.apple.com'">
                     <img class="auth-button-icon" src="images/apple-icon.svg" alt="">
-                    <span>continue with apple</span>
+                    <span>continue with Apple</span>
                 </div>
                 <div class="signin-button signin-register-button" onclick="showScreen('registration')">
                     don't have an account? <span class="signin-bold">register now</span>
+                </div>
+            </div>
+
+
+            <!-- Terms and Conditions Page-->
+            <div id="termsandconditions" class="screen">
+
+                <img class="back-button" src="images/back-icon.svg" alt="back button"
+                    onmousedown="this.src='images/back-icon-pressed.svg'"
+                    onmouseup="this.src='images/back-icon.svg'"
+                    ontouchstart="this.src='images/back-icon-pressed.svg'"
+                    ontouchend="this.src='images/back-icon.svg'"
+                    onclick="showScreen('registration')">
+
+                <h2 class="terms-heading">hi there</h2>
+                <p class="terms-subheading">before making an account, please review our terms and conditions</p>
+                <div class="terms-box">
+                    <p><span class="terms-title">terms and conditions</span></p>
+                    <p class="terms-body"> <p>
+                        Welcome to <strong>ephemera</strong>! Please read these Terms & Conditions
+                        carefully before using the app. By selecting <strong>"Agree"</strong> below,
+                        you acknowledge that you have read and accepted the following:
+                    </p>
+                    <p>
+                        This app is <strong>not</strong> a substitute for professional medical or
+                        mental health care. It is a self-guided tool designed to support users with
+                        OCD and anxiety. It does not provide medical advice, diagnosis, therapy, or
+                        professional treatment, and should not be considered a replacement for
+                        qualified healthcare services.
+                    </p>
+                    <p>
+                        A formal diagnosis is <strong>not</strong> required to use </strong>ephemera</strong>. While
+                        guidance from a healthcare professional is recommended, it is not necessary
+                        to use the app. Ephemera is intended for users aged <strong>18 years or
+                        older</strong>.
+                    </p>
+                    <p>
+                        By agreeing to these Terms & Conditions, you consent to the collection of
+                        limited, non-sensitive information, including your email address and
+                        anonymous feature usage analytics. Your journal entries and any personal
+                        information you enter into the app remain private and will not be sold or
+                        shared with third parties.
+                    </p>
+                    <p>
+                        Ephemera is not intended for use during a mental health emergency. If you
+                        believe you are at immediate risk of harming yourself or others, please
+                        <strong>contact your local emergency services or a mental health crisis service
+                        immediately</strong>.
+                    </p>
+                </p>
+                </div>
+                <div class="terms-buttons disagree-button" id="disagree-button" onclick="openDisagreePopup()">
+                    <span>disagree</span>
+                </div>
+            
+                <div class="terms-buttons agree-button" id="agree-button" onclick="Agree()">
+                    <span>agree</span>
                 </div>
             </div>
 
@@ -239,6 +296,21 @@
                 </div>
             </div>
         </div>
+
+         <!-- Disagree Popup -->
+         <div id="disagree-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/exclimation-icon.svg" alt="">
+                <h3 class="popup-heading">sorry...</h3>
+                <p class="popup-subtext">you cannot proceed without accepting the terms and conditions. </p>
+                <div class="popup-ok-button" onclick="closeDisagreePopup()">
+                    <span>ok</span>
+                </div>
+            </div>
+
 
     </div>
 </div>

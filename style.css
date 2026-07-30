@@ -230,10 +230,10 @@ body {
 /* Onboarding Pages info*/
 .skip-button{
     position: absolute;
-    top: 26px;
-    left: 16px;
     width: 56px;
     height: 56px;
+    top: 26px;
+    left: 16px;
 }
 
 .progress-text{
@@ -283,7 +283,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-family: Quicksand;
-    color: #3e4f45;
+    color:#3E4F45;
     text-align: center;
     z-index: 2;
 }
@@ -308,7 +308,7 @@ body {
     transform: translateX(-50%);
     border-radius: 15px;
     background-color: #7C6C5A;
-    color: #fcfcfc;
+    color: #FCFCFC;
     font-size: 20px;
     font-weight: 600;
     font-family: 'Quicksand';
@@ -320,8 +320,6 @@ body {
 .continue-button:active{
     background-color: #BBA892;
 }
-
-/* Skip Button info fro onboarding slides*/
 
 /* Overlay in the back of the popup */
 
@@ -352,8 +350,8 @@ body {
     height: 257px;
     text-align: center;
     font-family: 'Quicksand';
-    color: #3e4f45;
-    background-color: #fcfcfc;
+    color: #3E4F45;
+    background-color: #FCFCFC;
     border-radius: 20px;
 
 }
@@ -399,7 +397,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     font-family: Quicksand;
-    color: #3e4f45;
+    color: #3E4F45;
 }
 
 .popup-subtext{
@@ -411,18 +409,19 @@ body {
     font-size: 13px;
     font-weight: 500;
     font-family: Quicksand;
-    color: #3e4f45;
+    color: #3E4F45;
 }
 
 /* Buttons at the bottom of the popup*/
 .popup-buttons{
     position: absolute;
     width: 94px;
-    height: 30.5px; /* made this bigger in code since it it looking smaller thn it was in figma*/
+    height: 28px; /* made this bigger in code since it it looking smaller thn it was in figma*/
     top: 201px;
     border-radius: 8px;
     font-size: 14px; /* same made it bigger so people could read it better*/
     font-weight: 600;
+    border: 2px solid #7C6C5A;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -432,22 +431,20 @@ body {
 /* outline style button*/
 .popup-button-outline {
     left: 16px;
-    color: #7c6c5a;
-    border: 2px solid #7c6c5a;
+    color: #7C6C5A;
     background-color: transparent;
 }
 
 .popup-button-outline:active {
-    background-color: #7c6c5a;
-    color: #fcfcfc;
+    background-color: #7C6C5A;
+    color:#FCFCFC;
 }
 
 /* filled style button*/
 .popup-button-filled {
     left: 128px;
-    color: #fcfcfc;
-    border: 2px solid #7c6c5a;
-    background-color: #7c6c5a;
+    color:#FCFCFC;
+    background-color: #7C6C5A;
 }
 
 .popup-button-filled:active {
@@ -476,7 +473,7 @@ body {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Quicksand';
-    color: #3e4f45;
+    color: #3E4F45;
     text-align: center;
 }
 
@@ -489,7 +486,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     font-family: 'Quicksand';
-    color: #3e4f45;
+    color: #3E4F45;
     text-align: center;
 }
 
@@ -511,8 +508,8 @@ body {
     width: 361px;
     height: 48px;
     border-radius: 15px;
-    background-color: #3e4f45;
-    color: #fcfcfc;
+    background-color: #3E4F45;
+    color: #FCFCFC;
     font-family: 'Quicksand';
     font-size: 18px;
     font-weight: 600;
@@ -550,7 +547,7 @@ body {
     font-family: 'Quicksand';
     font-size: 12px;
     font-weight: 500;
-    color: #3e4f45;
+    color: #3E4F45;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -558,7 +555,7 @@ body {
 
 .signin-button:active  {
     background-color: #7c6c5a;
-    color: #fcfcfc;
+    color: #FCFCFC;
 }
 
 .signin-bold{
@@ -587,7 +584,7 @@ body {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Quicksand';
-    color: #3e4f45;
+    color: #3E4F45;
 }
 
 /* This is for the format of the email and password boxes */
@@ -622,12 +619,12 @@ label{
     width: 361px;
     height: 46px;
     border-radius: 15px;
-    border: 1px solid #bba892;
-    background-color: #fcfcfc;
+    border: 1px solid #BBA892;
+    background-color:  #FCFCFC;
     font-family: 'Quicksand';
     font-size: 16px;
     font-weight: 500;
-    color: #3e4f45;
+    color: #3E4F45;
     padding: 0 16px;
 }
 
@@ -640,7 +637,7 @@ label{
     transform: translateX(-50%);
     border-radius: 15px;
     background-color: #7C6C5A;
-    color: #fcfcfc;
+    color: #FCFCFC;
     font-size: 20px;
     font-weight: 600;
     font-family: 'Quicksand';
@@ -679,7 +676,7 @@ label{
 .or-line {
     flex: 1;
     height: 1px;
-    background-color: #bba892;
+    background-color: #BBA892;
 }
 
 .reg-google-button { 
@@ -692,8 +689,8 @@ label{
     top: 778px; }
 
 .reg-signin-button:active  {
-    background-color: #7c6c5a;
-    color: #fcfcfc;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
 }
 .signin-bold{
     font-weight: 600;
@@ -702,12 +699,12 @@ label{
 }
 
 .signin-button:active .signin-bold {
-    color: #fcfcfc;
+    color:#FCFCFC;
 }
 
 .access-denied{
     display: none;
-    color: #7c6c5a;
+    color: #7C6C5A;
     font-family: 'Quicksand';
     font-size: 12px;
     font-weight: 500;
@@ -751,8 +748,8 @@ label{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #fcfcfc; /* fixed colors they were off do in figma later */
-    border: 1px solid #7c6c5a;
+    background-color: #FCFCFC; /* fixed colors they were off do in figma later */
+    border: 1px solid #7C6C5A;
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -765,7 +762,7 @@ label{
     left: 50%;
     border-radius: 50%;
     transform: translate(-50%, -50%); /* need for center */
-    background-color: #3e4f45;
+    background-color:  #3E4F45;
     opacity: 0;
 }
 
@@ -781,11 +778,11 @@ label{
     top: 395px;
     left: 262px;
     border-radius: 8px;
-    border: 1.5px solid #7c6c5a;
+    border: 1.5px solid #7C6C5A;
     text-align: center;
     font-size: 11px;
     font-family: 'Quicksand';
-    color: #7c6c5a;
+    color: #7C6C5A;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -798,8 +795,8 @@ label{
 
 /* pressed */
 .forgetpassword:active {
-    background-color: #7c6c5a;
-    color: #fcfcfc;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
 }
 
 /* Different height than the pervious page*/
@@ -824,6 +821,145 @@ label{
     top: 716px; 
 }
 
+/* Terms and Conditions Page */
+.back-button{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: 26px;
+    left: 16px;
+}
+
+.terms-heading{
+    position: absolute;
+    width: 124px;
+    height: 38px;
+    top: 87px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #6F6150;
+    text-align: center;
+}
+
+.terms-subheading{
+    position: absolute;
+    width: 263px;
+    height: 36px;
+    top: 133px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color:  #6F6150;
+    text-align: center;
+}
+
+/* Scrollable box of the terms and conditions for users */
+.terms-box {
+    position: absolute;
+    width: 361px;
+    height: 541px;
+    top: 195px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1px solid #DCD5C5;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-top: 19px;
+    padding-left: 23px;
+    padding-right: 23px;
+    text-align: left;
+    font-family: 'Quicksand';
+    color: #3E4F45;  
+}
+
+.terms-title{
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+/* Black body to make it easier to read, tlk about how i found not pure black  */
+.terms-body{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 15px;
+    line-height: 1.5; 
+}
+
+
+/* Agree and Disagree buttons  */
+.terms-buttons{
+    position: absolute;
+    width: 172px;
+    height: 49px;
+    top: 766px;
+    border-radius: 15px;
+    border: 2px solid #7C6C5A;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disagree-button{
+    left: 16px;
+    color: #7C6C5A;
+    background-color: transparent;
+}
+
+.disagree-button:active {
+    color: #FCFCFC;
+    background-color:  #7C6C5A;
+}
+
+.agree-button{
+    left: 204px;
+    color: #FCFCFC;
+    background-color:  #7C6C5A;
+}
+
+.agree-button:active{
+    color: #FCFCFC;
+    background-color:  #BBA892;
+    border: 2px solid #BBA892;
+}
+
+/* Ok design for when popup only has one button */
+.popup-ok-button{
+    position: absolute;
+    width: 94px;
+    height: 28px;
+    top: 205px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    background-color: #7c6c5a;
+    border: 2px solid #7c6c5a;
+    color: #fcfcfc;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.popup-ok-button:active {
+    background-color: #BBA892;
+    border-color: #BBA892;
+}
 
 /* For use on real phones that I might need later on */
 /* Make a note in paper that I got this online */
