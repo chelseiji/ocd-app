@@ -529,9 +529,12 @@ body {
 }
 
 /* distance of the buttons from the top of the page*/
-.auth-button:nth-of-type(1) { top: 567px; }
-.auth-button:nth-of-type(2) { top: 639px; }
-.auth-button:nth-of-type(3) { top: 711px; }
+.auth-button:nth-of-type(1) { 
+    top: 567px; }
+.auth-button:nth-of-type(2) { 
+    top: 639px; }
+.auth-button:nth-of-type(3) { 
+    top: 711px; }
 
 /* Have an account sign in button*/
 
@@ -944,8 +947,8 @@ label{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 8px;
-    background-color: #7c6c5a;
-    border: 2px solid #7c6c5a;
+    background-color: #7C6C5A;
+    border: 2px solid #7C6C5A;
     color: #fcfcfc;
     font-size: 12px;
     font-weight: 600;
@@ -960,6 +963,63 @@ label{
     background-color: #BBA892;
     border-color: #BBA892;
 }
+
+/* Account setup*/
+
+.setup-heading{
+    position: absolute;
+    width: 203px;
+    height: 38px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: center;
+}
+
+.setup-subheading {
+    position: absolute;
+    width: 232px;
+    height: 30px;
+    top: 146px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color:#3E4F45;
+    text-align: center;
+}
+
+.setup-image-carousel{
+    position: absolute;
+    height: 244px;
+    top: 224px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    overflow-x: auto;
+    padding-top: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.setup-profile{
+    width: 244px;
+    height: 244px;
+    flex-shrink: 0;
+}
+
+.setup-profile.selected{
+    border: 2px solid #7C6C5A;
+    border-radius: 50%;
+}
+
 
 /* For use on real phones that I might need later on */
 /* Make a note in paper that I got this online */

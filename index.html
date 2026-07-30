@@ -201,7 +201,7 @@
                     <span class="forgot-password">forgot password?</span>
                 </div>
                 <!-- no authentification of password needed so it goes to the loadding screen before the homepage-->
-                <div class="reg-continue-button signin-continue-button" onclick="showScreen('loadingtohomepage')">
+                <div class="reg-continue-button signin-continue-button" onclick="showScreen('account-setup')">
                     <span>continue</span>
                 </div>
                 <div class="or-divider signin-or">
@@ -277,6 +277,28 @@
                 <div class="terms-buttons agree-button" id="agree-button" onclick="Agree()">
                     <span>agree</span>
                 </div>
+            </div>
+
+             <!-- Account Setup Page  -->
+             <div id="account-setup" class="screen">
+
+                <img class="back-button" src="images/back-icon.svg" alt="back button"
+                     onmousedown="this.src='images/back-icon-pressed.svg'"
+                     onmouseup="this.src='images/back-icon.svg'"
+                     ontouchstart="this.src='images/back-icon-pressed.svg'"
+                     ontouchend="this.src='images/back-icon.svg'"
+                     onclick="showScreen('termsandconditions')">
+            
+                <h2 class="setup-heading">account setup</h2>
+                <p class="setup-subheading">choose an icon below or select your own image</p>
+            
+                <div class="setup-image-carousel">
+                    <img class="setup-profile" src="images/profile-1.svg" alt="profile 1" onclick="selectProfile(this)">
+                    <img class="setup-profile" src="images/profile-2.svg" alt="profile 2" onclick="selectProfile(this)">
+                    <img class="setup-profile" src="images/profile-3.svg" alt="profile 3" onclick="selectProfile(this)">
+                    <img class="setup-profile" src="images/profile-4.svg" alt="profile 4" onclick="selectProfile(this)">
+                </div>
+            
             </div>
 
         <!-- Skip Popup -->

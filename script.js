@@ -85,5 +85,14 @@ function closeDisagreePopup() {
 
 // Go to loading before the homescreen
 function Agree() {
-    showScreen('prehome-loading');
+    showScreen('account-setup');
+}
+
+// slects the profile that the user clicks on
+function selectProfile(icon) {
+    var allCircles = document.querySelectorAll('.setup-profile');
+    for (var i = 0; i < allCircles.length; i++) {
+        allCircles[i].classList.remove('selected');
+    }
+    icon.classList.add('selected');
 }
