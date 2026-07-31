@@ -1031,12 +1031,18 @@ label{
     box-sizing: border-box;
     text-align: center;
     font-size: 14px;
+    font-weight: 600;
     font-family: 'Quicksand';
     color: #7C6C5A;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.add-image-button:active{
+    color: #FCFCFC;
+    background-color:#7C6C5A;
 }
 
 #image-preview {
@@ -1049,7 +1055,67 @@ label{
     border-radius: 50%;
 }
 
+/* input username section*/
+.name-box {
+    position: absolute;
+    width: 361px;
+    height: 132px;
+    top: 595px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1.5px solid #DCD5C5;
+    box-sizing: border-box;
+    padding-top: 23px;
+    padding-left: 62px;
+    padding-right: 62px;
+}
 
+.name-question {
+    font-size: 20px;
+    font-weight: 500;
+    color: #3E4F45;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.name-input {
+    display: block;
+    width: 234px;
+    height: 46px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: #F5F1ED;
+    border: 1.5px solid  #DCD5C5;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 500;
+    color: #3E4F45;
+    padding-top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.account-continue-button {
+    position: absolute;
+    width: 361px;
+    height: 48px;
+    top: 766px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-align: center;
+    line-height: 48px;
+}
+
+.account-continue-button:active {
+    background-color: #BBA892;
+}
 
 /* For use on real phones that I might need later on */
 /* Make a note in paper that I got this online */

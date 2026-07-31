@@ -201,7 +201,7 @@
                     <span class="forgot-password">forgot password?</span>
                 </div>
                 <!-- no authentification of password needed so it goes to the loadding screen before the homepage-->
-                <div class="reg-continue-button signin-continue-button" onclick="showScreen('account-setup')">
+                <div class="reg-continue-button signin-continue-button" onclick="showScreen('prehome-loading')">
                     <span>continue</span>
                 </div>
                 <div class="or-divider signin-or">
@@ -304,7 +304,13 @@
                     + add your own image
                 </label>
                 <input type="file" accept="image/*" id="choose-file" name="choose-file" style="display: none;">
-                            
+                <div class="name-box">
+                    <p class="name-question">what should we call you?</p>
+                    <input type="text" class="name-input" id="nickname-input" >
+                </div>  
+                <div class="account-continue-button" onclick="accountSetup()">
+                    <span>continue</span>
+                </div>
                 </div>
 
         <!-- Skip Popup -->

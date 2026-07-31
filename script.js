@@ -123,3 +123,24 @@ function getImgData() {
         });
     }
 }
+
+function accountSetup() {
+    showScreen('prehome-loading'); 
+}
+
+// Saves the username 
+var nicknameInput = document.getElementById('nickname-input');
+nicknameInput.addEventListener('input', function() {
+    localStorage.setItem('username', nicknameInput.value);
+});
+
+// Saves the profile pic that the users chose 
+function selectProfile(icon) {
+    var allCircles = document.querySelectorAll('.setup-profile');
+    for (var i = 0; i < allCircles.length; i++) {
+        allCircles[i].classList.remove('selected');
+    }
+    icon.classList.add('selected');
+    
+    localStorage.setItem('profileImage', icon.src);
+}
