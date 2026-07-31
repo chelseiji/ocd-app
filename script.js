@@ -124,10 +124,6 @@ function getImgData() {
     }
 }
 
-function accountSetup() {
-    showScreen('prehome-loading'); 
-}
-
 // Saves the username 
 var nicknameInput = document.getElementById('nickname-input');
 nicknameInput.addEventListener('input', function() {
@@ -141,6 +137,17 @@ function selectProfile(icon) {
         allCircles[i].classList.remove('selected');
     }
     icon.classList.add('selected');
-    
+
     localStorage.setItem('profileImage', icon.src);
+}
+
+function accountSetup() {
+    showScreen('prehome-loading'); 
+    startPrehomeLoading();
+}
+
+function startPrehomeLoading() {
+    setTimeout(function() {
+        showScreen('homescreen'); 
+    }, 7000);
 }

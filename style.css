@@ -1117,6 +1117,65 @@ label{
     background-color: #BBA892;
 }
 
+/* Loading screen before the homepage */
+.prehome-icon {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInIcon 1s ease-in forwards;
+}
+
+.prehome-outer-left {
+    width: 35px;
+    height: 73px;
+    top: 390px;
+    left: 23px;
+    animation-delay: 0.5s;
+}
+
+.prehome-outer-right {
+    width: 35px;
+    height: 73px;
+    top: 390px;
+    right: 23px;
+    animation-delay: 0.5s;
+}
+
+.prehome-inner-left {
+    width: 58px;
+    height: 120px;
+    top: 366px;
+    left: 76px;
+    animation-delay: 2s;
+}
+
+.prehome-inner-right {
+    width: 58px;
+    height: 120px;
+    top: 366px;
+    right: 76px;
+    animation-delay: 2s;
+}
+
+.prehome-middle {
+    width: 89px;
+    height: 183px;
+    top: 335px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 3.5s;
+}
+
+/* similar to the flowers */
+@keyframes fadeInIcon {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 /* For use on real phones that I might need later on */
 /* Make a note in paper that I got this online */
 @media (max-width: 420px) {
