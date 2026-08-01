@@ -1,0 +1,78 @@
+/* CSS for the meditation pages */
+
+.meditation-title {
+    position: absolute;
+    width: 106px;
+    height: 25px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: center;
+}
+
+.meditation-divider1 {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 108px;
+    left: 0;
+    background-color: #BBA892;
+}
+
+.visuals-title{
+    position: absolute;
+    width: 65px;
+    height: 25px;
+    top: 127px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #6F6150;
+    text-align: center;
+}
+
+.meditation-carousel {
+    position: absolute;
+    width: 100%;
+    height: 327px;
+    top: 170px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow-x: auto;
+    padding-left: 83px;
+    padding-right: 83px;
+    scroll-snap-type: x mandatory;
+}
+
+
+.meditation-image {
+    flex-shrink: 0;
+    width: 227px;
+    height: 327px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.meditation-image.selected {
+    border: 2px solid #7C6C5A;
+}
+
+.meditation-divider2 {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 516px;
+    left: 0;
+    background-color: #BBA892;
+}

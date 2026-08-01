@@ -1,6 +1,5 @@
 console.log('using app');
 
-// ONBOARDING
 //Changes the screen of the app thats active 
 function showScreen(screenNumber){
     //Elements in screen
@@ -13,6 +12,11 @@ function showScreen(screenNumber){
 
     //Makes it so that only the active screen is shown 
     document.getElementById(screenNumber).classList.add('active');
+
+    //for mediation page 
+    if (screenNumber === 'meditation') {
+        document.getElementById('meditation-carousel').scrollLeft = 227 + 30;
+    }
 }
 
 

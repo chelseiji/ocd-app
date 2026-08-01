@@ -6,6 +6,7 @@
     <title>OCD App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="onboarding.css">
+    <link rel="stylesheet" href="meditation.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -314,14 +315,33 @@
                 </div>
                 </div>
 
-                 <!-- Prehome Loading Page -->
-                 <div id="prehome-loading" class="screen">
+            <!-- Prehome Loading Page -->
+            <div id="prehome-loading" class="screen">
                     <img class="prehome-icon prehome-outer-left" src="images/prehome-1.svg" alt="">
                     <img class="prehome-icon prehome-inner-left" src="images/prehome-2.svg" alt="">
                     <img class="prehome-icon prehome-middle" src="images/prehome-3.svg" alt="">
                     <img class="prehome-icon prehome-inner-right" src="images/prehome-4.svg" alt="">
                     <img class="prehome-icon prehome-outer-right" src="images/prehome-5.svg" alt="">
+            </div>
+
+            <!-- Meditation Homepage -->
+            <div id="meditation" class="screen">
+                <h2 class="meditation-title">meditation</h2>
+                <div class="meditation-divider1"></div>
+                <h3 class="visuals-title">visuals</h3>
+
+                <div class="meditation-carousel" id="meditation-carousel">
+                    <img class="meditation-image" src="images/meditation-1.svg" alt="meditation background 1" onclick="selectMeditationImage(this)">
+                    <img class="meditation-image" src="images/meditation-2.svg" alt="meditation background 2" onclick="selectMeditationImage(this)">
+                    <img class="meditation-image" src="images/meditation-3.svg" alt="meditation background 3" onclick="selectMeditationImage(this)">
+                    <img class="meditation-image" src="images/meditation-4.svg" alt="meditation background 4" onclick="selectMeditationImage(this)">
+                    <img class="meditation-image" src="images/meditation-5.svg" alt="meditation background 5" onclick="selectMeditationImage(this)">
+                    <img class="meditation-image" src="images/meditation-6.svg" alt="meditation background 6" onclick="selectMeditationImage(this)">
+                    <img class="meditation-image" src="images/meditation-7.svg" alt="meditation background 7" onclick="selectMeditationImage(this)">
                 </div>
+                <div class="meditation-divider2"></div>
+
+            </div>
 
         <!-- Skip Popup -->
         <div id="skip-popup" class="popup-overlay">
@@ -362,5 +382,6 @@
 
     <script src="script.js"></script>
     <script src="onboarding.js"></script>
+    <script src="meditation.js"></script>
 </body>
 </html>
