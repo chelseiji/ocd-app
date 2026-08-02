@@ -46,7 +46,7 @@
                      onmousedown="this.src='images/skip-button-pressed.svg'"
                      onmouseup="this.src='images/skip-button.svg'"
                      ontouchstart="this.src='images/skip-button-pressed.svg'"
-                     ontouchend="this.src='images/skip-icon.svg'"
+                     ontouchend="this.src='images/skip-button.svg'"
                      onclick="openPopup()">
                 <p class="progress-text">1/4</p>
                 <img class="progress-bar" src="images/progressbar1.svg" alt="progress bar">
@@ -64,7 +64,7 @@
                     onmousedown="this.src='images/skip-button-pressed.svg'"
                     onmouseup="this.src='images/skip-button.svg'"
                     ontouchstart="this.src='images/skip-button-pressed.svg'"
-                    ontouchend="this.src='images/skip-icon.svg'"
+                    ontouchend="this.src='images/skip-button.svg'"
                     onclick="openPopup()">
             <p class="progress-text">2/4</p>
             <img class="progress-bar" src="images/progressbar2.svg" alt="progress bar">
@@ -82,7 +82,7 @@
                     onmousedown="this.src='images/skip-button-pressed.svg'"
                     onmouseup="this.src='images/skip-button.svg'"
                     ontouchstart="this.src='images/skip-button-pressed.svg'"
-                    ontouchend="this.src='images/skip-icon.svg'"
+                    ontouchend="this.src='images/skip-button.svg'"
                     onclick="openPopup()">
             <p class="progress-text">3/4</p>
             <img class="progress-bar" src="images/progressbar3.svg" alt="progress bar">
@@ -100,7 +100,7 @@
                     onmousedown="this.src='images/skip-button-pressed.svg'"
                     onmouseup="this.src='images/skip-button.svg'"
                     ontouchstart="this.src='images/skip-button-pressed.svg'"
-                    ontouchend="this.src='images/skip-icon.svg'"
+                    ontouchend="this.src='images/skip-button.svg'"
                     onclick="openPopup()">
             <p class="progress-text">4/4</p>
             <img class="progress-bar" src="images/progressbar4.svg" alt="progress bar">
@@ -340,7 +340,7 @@
                     <img class="meditation-image" src="images/meditation-7.svg" alt="meditation background 7" onclick="selectMeditationImage(this)">
                 </div>
                 <div class="meditation-divider2"></div>
-                <div class="white-box"></div>
+                <div class="white-box-audio"></div>
                 <h3 class="audio-title">audio</h3>
 
                 <div class="audio-element sleep" onclick="selectAudio(this, 'sleep')">
@@ -550,6 +550,12 @@
                     <p class="time-number">60</p>
                 </div>
             </div>
+            <div class="selected-time"></div>
+            <div class="top-ombre"></div>
+            <div class="bottom-ombre"></div>
+            <div class="meditationtimer-continue-button" onclick="showScreen('meditation-session')">
+                <span>continue</span>
+            </div>
 
         </div>
 
@@ -567,6 +573,9 @@
                 </div>
                 <div class="popup-buttons popup-button-filled" onclick="skipOnboarding()">
                     <span>yes</span>
+                </div>
+                <div class="meditationtimer-continue-button" onclick="showScreen('meditation-session')">
+                    <span>continue</span>
                 </div>
             </div>
         </div>
