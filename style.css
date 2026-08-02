@@ -48,6 +48,7 @@ body {
 
 /* Background */
 .phone-screen {
+    position: relative;
     background: #F5F1ED;           
     border-radius: 44px;
     flex: 1;

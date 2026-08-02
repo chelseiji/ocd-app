@@ -340,8 +340,70 @@
                     <img class="meditation-image" src="images/meditation-7.svg" alt="meditation background 7" onclick="selectMeditationImage(this)">
                 </div>
                 <div class="meditation-divider2"></div>
+                <div class="white-box"></div>
+                <h3 class="audio-title">audio</h3>
 
+                <div class="audio-element sleep" onclick="selectAudio(this, 'sleep')">
+                    <img class="audio-icon" src="images/sleep.svg" alt="sleep" id="audio-icon-sleep">
+                    <p class="audio-label">sleep</p>
+                </div>
+                
+                <div class="audio-element focus" onclick="selectAudio(this, 'focus')">
+                    <img class="audio-icon" src="images/focus.svg" alt="focus" id="audio-icon-focus">
+                    <p class="audio-label">focus</p>
+                </div>
+                
+                <div class="audio-element calm" onclick="selectAudio(this, 'calm')">
+                    <img class="audio-icon" src="images/calm.svg" alt="calm" id="audio-icon-calm">
+                    <p class="audio-label">calm</p>
+                </div>
+                
+                <div class="audio-element soothe" onclick="selectAudio(this, 'soothe')">
+                    <img class="audio-icon" src="images/soothe.svg" alt="soothe" id="audio-icon-soothe">
+                    <p class="audio-label">soothe</p>
+                </div>
+                <div class="meditation-continue-button" onclick="showScreen('meditation-timer')">
+                    <span>continue</span>
+                </div>
             </div>
+
+        <!-- Nature Sounds for Soothe Popup -->
+        <div id="soothe-popup" class="popup-overlay soothe-overlay">
+            <div class="soothe-popup-box">
+                <div class="drag-handle"></div>
+        
+                <h3 class="nature-sounds-title">nature sounds</h3>
+                <div class="line-div"></div>
+        
+                <div class="audio-element ocean" onclick="selectSootheAudio(this, 'ocean')">
+                    <img class="audio-icon" src="images/ocean.svg" alt="ocean" id="audio-icon-ocean">
+                    <p class="audio-label">ocean</p>
+                </div>
+        
+                <div class="audio-element rain" onclick="selectSootheAudio(this, 'rain')">
+                    <img class="audio-icon" src="images/rain.svg" alt="rain" id="audio-icon-rain">
+                    <p class="audio-label">rain</p>
+                </div>
+        
+                <div class="audio-element stream" onclick="selectSootheAudio(this, 'stream')">
+                    <img class="audio-icon" src="images/stream.svg" alt="stream" id="audio-icon-stream">
+                    <p class="audio-label">stream</p>
+                </div>
+        
+                <div class="audio-element forest" onclick="selectSootheAudio(this, 'forest')">
+                    <img class="audio-icon" src="images/forest.svg" alt="forest" id="audio-icon-forest">
+                    <p class="audio-label">forest</p>
+                </div>
+        
+                <div class="soothe-popup-buttons soothe-cancel-button" onclick="Cancel()">
+                    <span>cancel</span>
+                </div>
+        
+                <div class="soothe-popup-buttons soothe-save-button" onclick="saveSootheAudio()">
+                    <span>save</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Skip Popup -->
         <div id="skip-popup" class="popup-overlay">

@@ -27,7 +27,7 @@
     position: absolute;
     width: 65px;
     height: 25px;
-    top: 127px;
+    top: 124px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
@@ -41,7 +41,7 @@
     position: absolute;
     width: 100%;
     height: 327px;
-    top: 170px;
+    top: 167px;
     left: 0;
     display: flex;
     align-items: center;
@@ -74,5 +74,194 @@
     height: 1px;
     top: 516px;
     left: 0;
+    background-color: #BBA892;
+}
+
+/* audio section */
+
+.audio-title{
+    position: absolute;
+    width: 54px;
+    height: 25px;
+    top: 525px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #6F6150;
+    text-align: center;
+}
+
+.white-box{
+    position: absolute;
+    width: 361px;
+    height: 132px;
+    top: 569px;
+    left: 16px;
+    background-color: #FCFCFC;
+    border: 1px solid #DCD5C5;
+    box-sizing: border-box;
+}
+
+.audio-element {
+    position: absolute;
+    top: 587px;
+    width: 71px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.audio-icon {
+    width: 71px;
+    height: 71px;
+}
+
+
+.audio-label {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+}
+
+/* individual left positions */
+.sleep { 
+    left: 23px; 
+}
+.focus { 
+    left: 116px; 
+}
+.calm { 
+    left: 207px; 
+}
+.soothe { 
+    left: 300px; 
+}
+
+/* Specifically for the soothe part hat has a lot of different audios */
+
+.soothe-overlay {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.soothe-popup-box {
+    position: relative;
+    width: 100%;
+    height: 314px;
+    box-shadow: 0px -6px 11.9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0px 0px;
+    background-color: #F5F1ED;
+}
+
+.drag-handle {
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2.5px;
+    background-color: #DCD5C5;
+}
+
+.nature-sounds-title {
+    position: absolute;
+    width: 141px;
+    height: 17px;
+    top: 50px;
+    left: 16px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    color: #3e4f45;
+    text-align: left;
+}
+
+.line-div {
+    position: relative;
+    width: 361px;
+    height: 1px;
+    top: 82px;
+    left: 17px;
+    border-top: 1px solid #DCD5C5;
+    box-sizing: border-box;
+    }
+
+/* reusing the same styles from before */
+.ocean { 
+    left: 14px; 
+    top: 116px; 
+}
+.rain { 
+    left: 112px; 
+    top: 116px; 
+}
+.stream { 
+    left: 210px; 
+    top: 116px; 
+}
+.forest { 
+    left: 308px; 
+    top: 116px; 
+}
+
+.soothe-popup-buttons{
+    position: absolute;
+    width: 173px;
+    height: 51px;
+    top: 246px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: 'Quicksand';
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soothe-cancel-button {
+    left: 16px;
+    color: #7C6C5A;
+    background-color: #FCFCFC;
+    border: 2px solid #7C6C5A;
+}
+
+.soothe-cancel-button:active {
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+}
+
+.soothe-save-button {
+    left: 206px;
+    color: #FCFCFC;
+    background-color: #7C6C5A;
+}
+
+.soothe-save-button:active {
+    background-color: #BBA892;
+}
+
+.meditation-continue-button {
+    position: absolute;
+    width: 361px;
+    height: 48px;
+    top: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-align: center;
+    line-height: 48px;
+}
+
+.meditation-continue-button:active {
     background-color: #BBA892;
 }
