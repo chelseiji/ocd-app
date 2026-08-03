@@ -118,3 +118,100 @@ function saveSootheAudio() {
 
     closeSoothePopup();
 }
+
+
+
+//Meditation Session Code 
+
+var sessionAudio = null;
+var sessionPaused = true;
+var sessionTimeout = null;
+
+function startMeditationSession() {
+    var savedBackground = localStorage.getItem('meditationBackground');
+    if (savedBackground) {
+        document.getElementById('meditation-background').src = savedBackground;
+    }
+
+    var savedAudioName = localStorage.getItem('meditationAudio');
+    if (savedAudioName) {
+        sessionAudio = new Audio('audio/' + savedAudioName + '.mp3');
+        sessionAudio.loop = true;
+    }
+
+    sessionPaused = true;
+    document.getElementById('session-timer').innerHTML = "10" + ":" + "00";
+    document.getElementById('session-play-button').src = 'images/play.svg';
+}
+
+function checkSecond(sec) {
+    if (sec < 10 && sec >= 0) { sec = "0" + sec }; 
+    if (sec < 0) { sec = "59" };
+    return sec;
+}
+
+function runSessionTimer() {
+    if (sessionPaused) {
+        return;
+    }
+
+    var presentTime = document.getElementById('session-timer').innerHTML;
+    var timeArray = presentTime.split(/[:]+/);
+    var m = timeArray[0];
+    var s = checkSecond((timeArray[1] - 1));
+    if (s == 59) { m = m - 1 }
+    if (m < 0) {
+        pauseSession();
+        return;
+    }
+
+    document.getElementById('session-timer').innerHTML = m + ":" + s;
+
+    sessionTimeout = setTimeout(runSessionTimer, 1000);
+}
+
+function playAndpause() {
+    var playButton = document.getElementById('session-play-button');
+
+    if (sessionPaused) {
+        sessionPaused = false;
+        playButton.src = 'images/pause.svg';
+
+        if (sessionAudio) {
+            sessionAudio.play();
+        }
+
+        runSessionTimer();
+    } else {
+        pauseSession();
+    }
+}
+
+function pauseSession() {
+    sessionPaused = true;
+    document.getElementById('session-play-button').src = 'images/play.svg';
+
+    if (sessionAudio) {
+        sessionAudio.pause();
+    }
+
+    clearTimeout(sessionTimeout);
+}
+
+function openSessionExitPopup() {
+    pauseSession();
+    document.getElementById('session-exit-popup').classList.add('active');
+}
+
+function closeSessionExitPopup() {
+    document.getElementById('session-exit-popup').classList.remove('active');
+}
+
+function returnMeditation() {
+    if (sessionAudio) {
+        sessionAudio.pause();
+    }
+    clearTimeout(sessionTimeout);
+    closeSessionExitPopup();
+    showScreen('meditation'); 
+}

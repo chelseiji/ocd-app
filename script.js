@@ -17,6 +17,10 @@ function showScreen(screenNumber){
     if (screenNumber === 'meditation') {
         document.getElementById('meditation-carousel').scrollLeft = 227 + 30;
     }
+
+    if (screenNumber === 'meditation-session') {
+        startMeditationSession();
+    }
 }
 
 

@@ -559,6 +559,44 @@
 
         </div>
 
+         <!-- Meditation Session Page -->
+         <div id="meditation-session" class="screen">
+
+            <img class="meditation-background" id="meditation-background" src="" alt="">
+        
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                 onmousedown="this.src='images/back-icon-pressed.svg'"
+                 onmouseup="this.src='images/back-icon.svg'"
+                 ontouchstart="this.src='images/back-icon-pressed.svg'"
+                 ontouchend="this.src='images/back-icon.svg'"
+                 onclick="openSessionExitPopup()">
+        
+            <div class="liquid-circle">
+                <p class="session-timer" id="session-timer">10:00</p>
+            </div>
+        
+            <img class="session-play-button" id="session-play-button" src="images/play.svg" alt="play" onclick="playAndpause()">
+        
+        </div>
+
+        <!-- Exit Meditation Popup -->
+        <div id="session-exit-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/meditation-popup.svg" alt="">
+                <h3 class="popup-heading">are you sure?</h3>
+                <p class="popup-subtext">by pressing return your meditation will end</p>
+                <div class="popup-buttons popup-button-outline" onclick="returnMeditation()">
+                    <span>return</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="closeSessionExitPopup()">
+                    <span>stay</span>
+                </div>
+            </div>
+        </div>
+
         <!-- Skip Popup -->
         <div id="skip-popup" class="popup-overlay">
             <div class="white-box">

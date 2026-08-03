@@ -150,7 +150,7 @@
 
 .soothe-popup-box {
     position: relative;
-    width: 100%;
+    width: 393px;
     height: 314px;
     box-shadow: 0px -6px 11.9px rgba(0, 0, 0, 0.25);
     border-radius: 20px 20px 0px 0px;
@@ -299,7 +299,7 @@
     width: 100%;
     height: 1px;
     top: 170px;
-    border-top: 1px solid #bba892;
+    border-top: 1px solid #BBA892;
     box-sizing: border-box;
 }
 
@@ -348,7 +348,7 @@
     width: 325px;
     height: 220px;
     top: 240px;
-    background: linear-gradient(179.84deg, #f5f1ed, rgba(245, 241, 237, 0));
+    background: linear-gradient(179.84deg, #F5F1ED, rgba(245, 241, 237, 0));
     }
 
 .bottom-ombre {
@@ -356,7 +356,7 @@
     width: 325px;
     height: 220px;
     top: 440px;
-    background: linear-gradient(179.84deg, rgba(245, 241, 237, 0), #f5f1ed);
+    background: linear-gradient(179.84deg, rgba(245, 241, 237, 0), #F5F1ED);
 }
 
 .selected-time {
@@ -389,3 +389,54 @@
     line-height: 48px;
 }
 
+
+/* Meditation Session Page  */
+.meditation-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.liquid-circle {
+    position: absolute;
+    width: 324px;
+    height: 324px;
+    top: 198px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background: linear-gradient(139.38deg, rgba(239, 248, 253, 0.2) 50%, rgba(245, 241, 237, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.session-timer {
+    position: absolute;
+    width: 170px;
+    height: 67px;
+    top: 140px;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #FCFCFC;
+    text-align: center;
+    z-index: 2;
+}
+
+.session-play-button {
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    bottom: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
