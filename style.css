@@ -15,7 +15,7 @@ body {
 }
 
 /* Makes the black phone outline shape for realism */
-/* Note in the paper that I got this online */
+/* Written with help of AI to get phone dimensions */
 .phone-frame {
     width: 421px;
     height: 880px;

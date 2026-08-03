@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="onboarding.css">
     <link rel="stylesheet" href="meditation.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reflect.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="phone-frame">
@@ -579,6 +580,111 @@
         
         </div>
 
+        <!-- Reflect Page 1 -->
+        <div id="reflect" class="screen">
+
+            <h2 class="reflect-title">reflect</h2>
+            <p class="reflect-subtext">what do you need right now?</p>
+            <img class="reflect-icon just-thoughts-icon" src="images/just-thoughts.svg" alt="just thoughts" onclick="openJustThoughtsPopup()">
+            <img class="reflect-icon journals-icon" src="images/journals.svg" alt="journals" onclick="openJournalsPopup()">
+        
+        </div>
+
+         <!-- Just Thoughts Page -->
+         <div id="just-thoughts" class="screen">
+            <h2 class="just-thoughts-title">just thoughts</h2>
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+            onmousedown="this.src='images/back-icon-pressed.svg'"
+            onmouseup="this.src='images/back-icon.svg'"
+            ontouchstart="this.src='images/back-icon-pressed.svg'"
+            ontouchend="this.src='images/back-icon.svg'"
+            onclick="showScreen('reflect')">
+
+            <div class="just-thoughts-box"></div>
+            <p class="just-thoughts-subtext">"your thoughts are not who you are"</p>
+            <textarea class="user-text" id="thoughts-textbox" ></textarea>
+            <canvas id="dissolve-canvas" class="dissolve-canvas"></canvas>
+            <canvas id="erase-canvas" class="erase-canvas"></canvas>
+            <div class="send-button" onclick="sendThought()">
+                <span>send</span>
+            </div>
+            <p class="just-thoughts-subtext2">choose how to let go</p>
+            <div class="action-box"></div>
+
+            <!-- similar structure to the nature sounds popup-->
+
+            <div class="thoughts-element dissolve" onclick="selectThoughtsOption(this, 'dissolve')">
+                <img class="thoughts-icon" src="images/dissolve.svg" alt="dissolve" id="thoughts-icon-dissolve">
+                <p class="thoughts-label">dissolve</p>
+            </div>
+            
+            <div class="thoughts-element fly" onclick="selectThoughtsOption(this, 'fly')">
+                <img class="thoughts-icon" src="images/fly.svg" alt="fly" id="thoughts-icon-fly">
+                <p class="thoughts-label">fly</p>
+            </div>
+            
+            <div class="thoughts-element crush" onclick="selectThoughtsOption(this, 'crush')">
+                <img class="thoughts-icon" src="images/crush.svg" alt="crush" id="thoughts-icon-crush">
+                <p class="thoughts-label">crush</p>
+            </div>
+            
+            <div class="thoughts-element erase" onclick="selectThoughtsOption(this, 'erase')">
+                <img class="thoughts-icon" src="images/erase.svg" alt="erase" id="thoughts-icon-erase">
+                <p class="thoughts-label">erase</p>
+            </div>
+
+        </div>
+
+
+        <!-- Just Thoughts Popup -->
+        <div id="just-thoughts-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/exclimation-icon.svg" alt="">
+                <h3 class="popup-heading">hey there!</h3>
+                <p class="popup-subtext">to use this feature type out your thoughts and watch them disappear!</p>
+                <div class="popup-ok-button" onclick="JustThoughts()">
+                    <span>ok</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Journals Popup -->
+        <div id="journals-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/exclimation-icon.svg" alt="">
+                <h3 class="popup-heading">hey there!</h3>
+                <p class="popup-subtext">this is a journal feature, write down any thoughts you have and let it all go!</p>
+                <div class="popup-ok-button" onclick="Journals()">
+                    <span>ok</span>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- Completed Meditation Popup -->
+         <div id="session-complete-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/meditation-popup.svg" alt="">
+                <h3 class="popup-heading">meditation complete</h3>
+                <p class="popup-subtext">you can stay and continue the meditation or return to the meditation homepage</p>
+                <div class="popup-buttons popup-button-outline" onclick="returnMeditation2()">
+                    <span>home</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="restartMeditation()">
+                    <span>continue</span>
+                </div>
+            </div>
+        </div>
+
         <!-- Exit Meditation Popup -->
         <div id="session-exit-popup" class="popup-overlay">
             <div class="white-box">
@@ -640,5 +746,6 @@
     <script src="script.js"></script>
     <script src="onboarding.js"></script>
     <script src="meditation.js"></script>
+    <script src="reflect.js"></script>
 </body>
 </html>

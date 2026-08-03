@@ -17,6 +17,7 @@ function skipOnboarding() {
 
 // REGISTRATION
 // Changes the password form visible to not visible as well as the eyes
+//Password validation inspo from @GeeksforGeeks: How to validate confirm password using JavaScript ?
 function togglePassword(inputId, icon) {
     var input = document.getElementById(inputId);
 
@@ -66,6 +67,7 @@ function Agree() {
 
 // ACCOUNT SETUP
 // slects the profile that the user clicks on
+//Document from @W3 Schools: HTML DOM Document querySelectorAll()
 function selectProfile(icon) {
     var allCircles = document.querySelectorAll('.setup-profile');
     for (var i = 0; i < allCircles.length; i++) {
@@ -81,6 +83,7 @@ chooseFile.addEventListener("change", function () {
     getImgData();
 });
 
+//Having user select their own image from @W3 Collective: Preview selected image (input type=”file”) using JavaScript
 function getImgData() {
     var files = chooseFile.files[0];
     if (files) {
@@ -103,6 +106,7 @@ nicknameInput.addEventListener('input', function() {
 });
 
 // Saves the profile pic that the users chose 
+//Saving the username and image to local storage from @GeeksforGeeks : How to Create a Textfield to Enter a Username and Save it on a Website?
 function selectProfile(icon) {
     var allCircles = document.querySelectorAll('.setup-profile');
     for (var i = 0; i < allCircles.length; i++) {

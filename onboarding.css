@@ -90,6 +90,7 @@
 }
 
 /* This is so that the flowers start at diff positions as well as more spread out  */
+/* Flower Falling Effect from @OptimisticWeb on CodePen  */
 .flower:nth-child(1) {
     left: 25%;
     animation-delay: 1s;
@@ -791,6 +792,7 @@ label{
 }
 
 /* Scrollable box of the terms and conditions for users */
+/* Overflow Y from @W3schools: CSS overflow-x and overflow-y */
 .terms-box {
     position: absolute;
     width: 361px;
@@ -1097,6 +1099,7 @@ label{
 }
 
 /* similar to the flowers */
+/* FadeIn from  @Tramaine Eto on Medium */
 @keyframes fadeInIcon {
     from {
         opacity: 0;
@@ -1108,7 +1111,7 @@ label{
 
 
 /* For use on real phones that I might need later on */
-/* Make a note in paper that I got this online */
+/* Written with help of AI to allow possible use on phones later on */
 @media (max-width: 420px) {
     body {
         background: #000000;

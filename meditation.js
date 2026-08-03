@@ -12,6 +12,8 @@ function selectMeditationImage(icon) {
 
 
  //Deals with selection issues
+ //Code to have audio play for a couple of seconds from @DeveloperMozilla : HTMLMediaElement: play() method
+ // & StackOverflow : How to play audio at a specific time in javascript
 var currentAudio = null;
 var previewSound = null;
 
@@ -127,6 +129,7 @@ var sessionAudio = null;
 var sessionPaused = true;
 var sessionTimeout = null;
 
+//Code for countdown timer inspired by @ishan on CodePen: JavaScript 5 minute countdown timer
 function startMeditationSession() {
     var savedBackground = localStorage.getItem('meditationBackground');
     if (savedBackground) {
@@ -161,7 +164,8 @@ function runSessionTimer() {
     var s = checkSecond((timeArray[1] - 1));
     if (s == 59) { m = m - 1 }
     if (m < 0) {
-        pauseSession();
+        //changes since i have something happen when sessio ends now 
+        openSessionCompletePopup();
         return;
     }
 
@@ -214,4 +218,32 @@ function returnMeditation() {
     clearTimeout(sessionTimeout);
     closeSessionExitPopup();
     showScreen('meditation'); 
+}
+
+
+//Meditation Session after session ends popup
+
+function openSessionCompletePopup() {
+    pauseSession();
+    document.getElementById('session-complete-popup').classList.add('active');
+}
+
+function closeSessionCompletePopup() {
+    document.getElementById('session-complete-popup').classList.remove('active');
+}
+
+
+function returnMeditation2() {
+    if (sessionAudio) {
+        sessionAudio.pause();
+    }
+    closeSessionCompletePopup();
+    showScreen('meditation'); 
+}
+
+
+function restartMeditation() {
+    closeSessionCompletePopup();
+    startMeditationSession();
+    playAndpause();
 }
