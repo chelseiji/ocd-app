@@ -21,6 +21,11 @@ function showScreen(screenNumber){
     if (screenNumber === 'meditation-session') {
         startMeditationSession();
     }
+
+    //for journal page 
+    if (screenNumber === 'journals') {
+        updateNoJournalsText();
+    }
 }
 
 

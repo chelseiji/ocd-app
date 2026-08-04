@@ -437,6 +437,7 @@ function closeJournalEntryPopup() {
 }
 
 // discards everything typed/uploaded and goes back to the journals page
+// this function was make with the help of AI
 function returnJournalHome() {
     localStorage.removeItem('journalTitle');
     localStorage.removeItem('journalBody');
@@ -448,4 +449,107 @@ function returnJournalHome() {
 
     closeJournalEntryPopup() ;
     showScreen('journals');
+}
+
+//saves the journal entry (which i saved in the other functions) and then makes 
+//it go back to the journals page with the new journal added
+function saveJournalEntry() {
+    showScreen('journals');
+}
+
+
+
+// builds and displays a journal entry card on the journals page
+// this section below was made with the help of AI
+function addJournalEntryToPage() {
+    var savedImage = localStorage.getItem('journalImage');
+    var savedTitle = localStorage.getItem('journalTitle');
+    var savedBody = localStorage.getItem('journalBody');
+
+    if (!savedImage || !savedTitle) {
+        return;
+    }
+
+    buildJournalCard('user-entry', savedTitle, savedImage, savedBody);
+
+    for (var i = 0; i < hardcodedJournalEntries.length; i++) {
+        var entry = hardcodedJournalEntries[i];
+        buildJournalCard(entry.id, entry.title, entry.image, entry.body);
+    }
+
+    document.getElementById('journals-icon-left').src = 'images/visuals-active.svg';
+    document.getElementById('journals-icon-right').src = 'images/delete-active.svg';
+}
+
+
+// has the text show when there arent any jounrals 
+function updateNoJournalsText() {
+    var journalsList = document.getElementById('journals-list');
+    var noJournalsText = document.getElementById('no-journals-text');
+
+    if (journalsList.children.length === 0) {
+        addJournalEntryToPage();
+    }
+
+    if (journalsList.children.length === 0) {
+        noJournalsText.style.display = 'block';
+    } else {
+        noJournalsText.style.display = 'none';
+    }
+}
+
+
+// hardcoding the jounral entires 
+var hardcodedJournalEntries = [
+    {   id: 'j1', 
+        title: 'today was much better', 
+        image: 'images/hardcoded-1.jpg', 
+        body: 'after a long week of doing work I fianlly had a day to myself, I went out with some friends and had fun at dinner.' 
+    },
+    {   id: 'j2', 
+        title: 'the things i would do', 
+        image: 'images/hardcoded-2.jpg', 
+        body: 'sometimes when I am at my most overwhelmed I think of all of the things I would do if I were able to travel all of the time. I lke getting lost in my thoughts' 
+    },
+    {   id: 'j3', 
+        title: 'i went on a walk', 
+        image: 'images/hardcoded-3.jpg', 
+        body: 'I had a very stressful day at work and I just needed to go on a walk during my lunch break. I did not want to see people so instead I decided to look at the tress and the birds and I felt much better after.' 
+    },
+    {   id: 'j4', 
+        title: 'i am happy', 
+        image: 'images/hardcoded-4.jpg', 
+        body: 'I am really putting the work into my work and also into my mental health. I feel like I am doing much better and I can confidently say that I am feeling much happier' 
+    }
+];
+
+function buildJournalCard(id, title, image, body) {
+    var journalsList = document.getElementById('journals-list');
+
+    var card = document.createElement('div');
+    card.className = 'journal-card';
+    card.setAttribute('data-id', id);
+    card.setAttribute('data-title', title);
+    card.setAttribute('data-image', image);
+    card.setAttribute('data-body', body);
+    card.onclick = function() {
+        openJournalReadPage(id, title, image, body);
+    };
+
+    // this section below was made with the help of AI
+    var imageEl = document.createElement('img');
+    imageEl.className = 'journal-entry-image';
+    imageEl.src = image;
+    card.appendChild(imageEl);
+
+    var titleBar = document.createElement('div');
+    titleBar.className = 'journal-title-bar';
+
+    var titleEl = document.createElement('p');
+    titleEl.className = 'journal-entry-title';
+    titleEl.textContent = title;
+    titleBar.appendChild(titleEl);
+
+    card.appendChild(titleBar);
+    journalsList.appendChild(card);
 }

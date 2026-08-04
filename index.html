@@ -646,20 +646,18 @@
                  onclick="showScreen('reflect')">
         
             <h2 class="journals-title">journals</h2>
-            <img class="visuals-inactive" src="images/visuals-inactive.svg" alt="">
-            <img class="delete-inactive" src="images/delete-inactive.svg" alt="">
+            <img class="visuals-inactive" id="journals-icon-left" src="images/visuals-inactive.svg" alt="">
+            <img class="delete-inactive" id="journals-icon-right" src="images/delete-inactive.svg" alt="">
+            <div class="journals-ombre"></div>
             <div class="add-entry-button" onclick="showScreen('new-journal')">
                 <span>+ add a new entry</span>
             </div>
             <div id="journals-list">
-                <!-- gonna add the journal entries after -->
             </div>
             
             <p class="no-journals-text" id="no-journals-text">you have no active journal entries, click below to start writing</p>
         
         </div>
-
-
 
         <!-- New Journal Entry Page -->
         <div id="new-journal" class="screen">
@@ -711,11 +709,11 @@
                 <input type="text" class="journal-title" id="journal-title" placeholder="title">
                 <textarea class="journal-body" id="journal-body" placeholder="write your entry here"></textarea>
             </div>
+            <div class="journal-save-button" onclick="saveJournalEntry()">
+                <span>save</span>
+            </div>
         
         </div>
-
-
-
 
         <!-- Just Thoughts Popup -->
         <div id="just-thoughts-popup" class="popup-overlay">
