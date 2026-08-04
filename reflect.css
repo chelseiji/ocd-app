@@ -636,3 +636,56 @@ This part is fully Ai generated */
 .journal-save-button:active {
     background-color: #BBA892;
 }
+
+/* Read Journal Page (opens after users click on one of the journals) */
+
+.read-journal-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 345px;
+    border-radius: 0px 0px 0px 120px;
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.read-journal-title {
+    position: absolute;
+    top: 365px;
+    left: 16px;
+    width: 313px;
+    height: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: left;
+}
+
+.read-journal-body {
+    position: absolute;
+    top: 405px;
+    left: 16px;
+    width: 361px;
+    height: 329px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #333333;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.edit-journal-button {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 36px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 1;
+}

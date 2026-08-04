@@ -714,6 +714,22 @@
             </div>
         
         </div>
+        <!-- Read Journal Page -->
+        <div id="read-journal" class="screen">
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="showScreen('journals')">
+
+            <img class="read-journal-image" id="read-journal-image" src="" alt="">
+            <img class="edit-journal-button" src="images/upload-icon.svg" alt="edit" onclick="showScreen('new-journal')">
+            <h2 class="read-journal-title" id="read-journal-title"></h2>
+            <p class="read-journal-body" id="read-journal-body"></p>
+
+        </div>
 
         <!-- Just Thoughts Popup -->
         <div id="just-thoughts-popup" class="popup-overlay">

@@ -553,3 +553,12 @@ function buildJournalCard(id, title, image, body) {
     card.appendChild(titleBar);
     journalsList.appendChild(card);
 }
+
+
+function openJournalReadPage(id, title, image, body) {
+    document.getElementById('read-journal-image').src = image;
+    document.getElementById('read-journal-title').textContent = title;
+    document.getElementById('read-journal-body').textContent = body;
+
+    showScreen('read-journal');
+}
