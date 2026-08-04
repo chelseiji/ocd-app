@@ -370,3 +370,82 @@ function sendThought() {
         runCrushEffect();
     }
 }
+
+
+
+
+// Journal Pages - different from reflect 
+// basically the same as profile upload but instead replaces the placeholder image
+
+var journalImageUpload = document.getElementById('journal-image-upload');
+var journalImageBox = document.getElementById('journal-image-box');
+
+journalImageUpload.addEventListener('change', function() {
+    var file = journalImageUpload.files[0];
+    if (file) {
+        var imageUrl = URL.createObjectURL(file);
+        journalImageBox.src = imageUrl;
+        localStorage.setItem('journalImage', imageUrl);
+    }
+});
+
+localStorage.setItem('journalImage', journalImageBox.src);
+
+// opens/closes the prompt dropdown, flips the arrow icon
+function togglePromptDropdown() {
+    var panel = document.getElementById('prompt-dropdown-panel');
+    var arrow = document.getElementById('prompt-dropdown-arrow');
+
+    if (panel.classList.contains('open')) {
+        panel.classList.remove('open');
+        arrow.src = 'images/arrow-down.svg';
+    } else {
+        panel.classList.add('open');
+        arrow.src = 'images/arrow-up.svg';
+    }
+}
+
+// closes dropdown and chooses the prompt
+// this function was make with the help of AI
+function selectPrompt(promptElement) {
+    document.getElementById('prompt-dropdown-text').textContent = promptElement.textContent;
+
+    var panel = document.getElementById('prompt-dropdown-panel');
+    panel.classList.remove('open');
+    document.getElementById('prompt-dropdown-arrow').src = 'images/arrow-down.svg';
+}
+
+// saves the body and title in the journal for later use same functions as used earlier 
+
+var journalTitleInput = document.getElementById('journal-title');
+journalTitleInput.addEventListener('input', function() {
+    localStorage.setItem('journalTitle', journalTitleInput.value);
+});
+
+var journalBodyInput = document.getElementById('journal-body');
+journalBodyInput.addEventListener('input', function() {
+    localStorage.setItem('journalBody', journalBodyInput.value);
+});
+
+
+function openJournalEntryPopup(){
+    document.getElementById('leave-journal-entry-popup').classList.add('active');
+}
+
+function closeJournalEntryPopup() {
+    document.getElementById('leave-journal-entry-popup').classList.remove('active');
+}
+
+// discards everything typed/uploaded and goes back to the journals page
+function returnJournalHome() {
+    localStorage.removeItem('journalTitle');
+    localStorage.removeItem('journalBody');
+    localStorage.removeItem('journalImage');
+
+    document.getElementById('journal-title').value = '';
+    document.getElementById('journal-body').value = '';
+    document.getElementById('journal-image-box').src = 'images/journal-header-image.jpg';
+
+    closeJournalEntryPopup() ;
+    showScreen('journals');
+}

@@ -635,6 +635,87 @@
 
         </div>
 
+         <!-- Journals Page -->
+         <div id="journals" class="screen">
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                 onmousedown="this.src='images/back-icon-pressed.svg'"
+                 onmouseup="this.src='images/back-icon.svg'"
+                 ontouchstart="this.src='images/back-icon-pressed.svg'"
+                 ontouchend="this.src='images/back-icon.svg'"
+                 onclick="showScreen('reflect')">
+        
+            <h2 class="journals-title">journals</h2>
+            <img class="visuals-inactive" src="images/visuals-inactive.svg" alt="">
+            <img class="delete-inactive" src="images/delete-inactive.svg" alt="">
+            <div class="add-entry-button" onclick="showScreen('new-journal')">
+                <span>+ add a new entry</span>
+            </div>
+            <div id="journals-list">
+                <!-- gonna add the journal entries after -->
+            </div>
+            
+            <p class="no-journals-text" id="no-journals-text">you have no active journal entries, click below to start writing</p>
+        
+        </div>
+
+
+
+        <!-- New Journal Entry Page -->
+        <div id="new-journal" class="screen">
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="openJournalEntryPopup()">
+        
+            <h2 class="new-journal-title">journal entry</h2>
+        
+            <div class="journal-image-wrapper">
+                <img class="journal-image-box" id="journal-image-box" src="images/journal-header-image.jpg" alt="journal image">
+        
+                <label class="journal-image-upload-button" for="journal-image-upload">
+                    <img src="images/upload-icon.svg" alt="upload">
+                </label>
+                <input type="file" accept="image/*" id="journal-image-upload" style="display: none;">
+            </div>
+
+            <div class="prompt-dropdown-box" id="prompt-dropdown-box" onclick="togglePromptDropdown()">
+                <span class="prompt-dropdown-text" id="prompt-dropdown-text">prompts to help your journaling</span>
+                <img class="prompt-dropdown-arrow" id="prompt-dropdown-arrow" src="images/arrow-down.svg" alt="">
+            </div>
+            
+            <div class="prompt-dropdown-panel" id="prompt-dropdown-panel">
+                <div class="prompt-scroll-frame">
+                    <div class="prompt-option" onclick="selectPrompt(this)">did you learn anything interesting lately</div>
+                    <div class="prompt-line"></div>
+                    <div class="prompt-option" onclick="selectPrompt(this)">name a moment where you felt proud of yourself</div>
+                    <div class="prompt-line"></div>
+                    <div class="prompt-option" onclick="selectPrompt(this)">what does your ideal day look like</div>
+                    <div class="prompt-line"></div>
+                    <div class="prompt-option" onclick="selectPrompt(this)">what is the best meal you've ever had</div>
+                    <div class="prompt-line"></div>
+                    <div class="prompt-option" onclick="selectPrompt(this)">what is your favorite show and why</div>
+                    <div class="prompt-line"></div>
+                    <div class="prompt-option" onclick="selectPrompt(this)">what is your favorite way to relax</div>
+                    <div class="prompt-line"></div>
+                    <div class="prompt-option" onclick="selectPrompt(this)">if you could be an animale, which and why</div>
+                    <div class="prompt-line"></div>
+                    <div class="prompt-option" onclick="selectPrompt(this)">if you could write a book what would it be about</div>
+                </div>
+            </div>
+
+            <div class="journal-text-box">
+                <input type="text" class="journal-title" id="journal-title" placeholder="title">
+                <textarea class="journal-body" id="journal-body" placeholder="write your entry here"></textarea>
+            </div>
+        
+        </div>
+
+
+
 
         <!-- Just Thoughts Popup -->
         <div id="just-thoughts-popup" class="popup-overlay">
@@ -662,6 +743,24 @@
                 <p class="popup-subtext">this is a journal feature, write down any thoughts you have and let it all go!</p>
                 <div class="popup-ok-button" onclick="Journals()">
                     <span>ok</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leave Journal Entry Popup -->
+        <div id="leave-journal-entry-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/back-popup.svg" alt="">
+                <h3 class="popup-heading">return?</h3>
+                <p class="popup-subtext">without saving your journal entry will not be saved</p>
+                <div class="popup-buttons popup-button-outline" onclick="returnJournalHome()">
+                    <span>return</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="closeJournalEntryPopup()">
+                    <span>stay</span>
                 </div>
             </div>
         </div>
