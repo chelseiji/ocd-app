@@ -435,6 +435,58 @@ This part is fully Ai generated */
     z-index: 4;
 }
 
+/* this is for when the users want to see the other view of the jounral entry page */
+.journals-carousel {
+    position: absolute;
+    top: 198px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 0 51.5px;
+}
+
+.journal-carousel-card {
+    position: relative;
+    flex-shrink: 0;
+    width: 290px;
+    height: 476px;
+}
+
+.journal-carousel-image {
+    width: 290px;
+    height: 476px;
+    border-radius: 50px;
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+}
+
+.journal-carousel-title-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 75px;
+    border-radius: 50px 50px 0px 0px;
+    background-color: #FCFCFC;
+    border: 1px solid #BBA892;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+}
+
+.journal-carousel-title {
+    margin-top: 12px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+}
+
 
 /* Journal Entry Page */
 .new-journal-title {

@@ -487,17 +487,18 @@ function updateNoJournalsText() {
     var journalsList = document.getElementById('journals-list');
     var noJournalsText = document.getElementById('no-journals-text');
 
-    if (journalsList.children.length === 0) {
-        addJournalEntryToPage();
-    }
+    // changed after I added the carosel view
+    renderJournalsView();
 
     if (journalsList.children.length === 0) {
         noJournalsText.style.display = 'block';
     } else {
         noJournalsText.style.display = 'none';
+        document.getElementById('journals-icon-left').src =
+            journalsViewMode === 'carousel' ? 'images/visuals-pressed.svg' : 'images/visuals-active.svg';
+        document.getElementById('journals-icon-right').src = 'images/delete-active.svg';
     }
 }
-
 
 // hardcoding the jounral entires 
 var hardcodedJournalEntries = [
@@ -536,21 +537,43 @@ function buildJournalCard(id, title, image, body) {
         openJournalReadPage(id, title, image, body);
     };
 
-    // this section below was made with the help of AI
-    var imageEl = document.createElement('img');
-    imageEl.className = 'journal-entry-image';
-    imageEl.src = image;
-    card.appendChild(imageEl);
+    // this section below was made with the help of AI section adapted after ading the carosel view of the journals
+    if (journalsViewMode === 'carousel') {
+        card.className = 'journal-carousel-card';
 
-    var titleBar = document.createElement('div');
-    titleBar.className = 'journal-title-bar';
+        var imageEl = document.createElement('img');
+        imageEl.className = 'journal-carousel-image';
+        imageEl.src = image;
+        card.appendChild(imageEl);
 
-    var titleEl = document.createElement('p');
-    titleEl.className = 'journal-entry-title';
-    titleEl.textContent = title;
-    titleBar.appendChild(titleEl);
+        var titleBar = document.createElement('div');
+        titleBar.className = 'journal-carousel-title-bar';
 
-    card.appendChild(titleBar);
+        var titleEl = document.createElement('p');
+        titleEl.className = 'journal-carousel-title';
+        titleEl.textContent = title;
+        titleBar.appendChild(titleEl);
+
+        card.appendChild(titleBar);
+    } else {
+        card.className = 'journal-card';
+
+        var imageEl2 = document.createElement('img');
+        imageEl2.className = 'journal-entry-image';
+        imageEl2.src = image;
+        card.appendChild(imageEl2);
+
+        var titleBar2 = document.createElement('div');
+        titleBar2.className = 'journal-title-bar';
+
+        var titleEl2 = document.createElement('p');
+        titleEl2.className = 'journal-entry-title';
+        titleEl2.textContent = title;
+        titleBar2.appendChild(titleEl2);
+
+        card.appendChild(titleBar2);
+    }
+
     journalsList.appendChild(card);
 }
 
@@ -561,4 +584,39 @@ function openJournalReadPage(id, title, image, body) {
     document.getElementById('read-journal-body').textContent = body;
 
     showScreen('read-journal');
+}
+
+
+var journalsViewMode = 'list'; 
+
+function toggleJournalsView() {
+    if (journalsViewMode === 'list') {
+        journalsViewMode = 'carousel';
+        document.getElementById('journals-icon-left').src = 'images/visuals-pressed.svg';
+    } else {
+        journalsViewMode = 'list';
+        document.getElementById('journals-icon-left').src = 'images/visuals-active.svg';
+    }
+
+    renderJournalsView();
+}
+
+// the function below was made with the use of AI
+function renderJournalsView() {
+    var journalsList = document.getElementById('journals-list');
+    journalsList.innerHTML = '';
+    journalsList.className = journalsViewMode === 'carousel' ? 'journals-carousel' : '';
+
+    var savedImage = localStorage.getItem('journalImage');
+    var savedTitle = localStorage.getItem('journalTitle');
+    var savedBody = localStorage.getItem('journalBody');
+
+    if (savedImage && savedTitle) {
+        buildJournalCard('user-entry', savedTitle, savedImage, savedBody);
+    }
+
+    for (var i = 0; i < hardcodedJournalEntries.length; i++) {
+        var entry = hardcodedJournalEntries[i];
+        buildJournalCard(entry.id, entry.title, entry.image, entry.body);
+    }
 }
