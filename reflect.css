@@ -409,6 +409,7 @@ This part is fully Ai generated */
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     z-index: 2;
 }
 
@@ -418,6 +419,18 @@ This part is fully Ai generated */
     margin-left: 2px;
     font-size: 18px;
     font-weight: 600;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: center;
+    z-index: 2;
+}
+
+.journal-entry-date {
+    width: 89px;
+    height: 19.8px;
+    margin-right: 9px;
+    font-size: 16px;
+    font-weight: 500;
     font-family: 'Quicksand';
     color: #3E4F45;
     text-align: center;
@@ -476,6 +489,7 @@ This part is fully Ai generated */
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
 }
 
 .journal-carousel-title {
@@ -485,6 +499,18 @@ This part is fully Ai generated */
     font-weight: 600;
     font-family: 'Quicksand';
     color: #3E4F45;
+}
+
+.journal-carousel-date {
+    margin-top: 8px;
+    margin-left: 20px;
+    width: 89px;
+    height: 19.8px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #3E4f45;
+    text-align: center;
 }
 
 

@@ -469,12 +469,12 @@ function addJournalEntryToPage() {
     if (!savedImage || !savedTitle) {
         return;
     }
-
-    buildJournalCard('user-entry', savedTitle, savedImage, savedBody);
+    // added this line myself when I was adding the hardcoded dates 
+    buildJournalCard('user-entry', savedTitle, savedImage, savedBody, '08/24/2026');
 
     for (var i = 0; i < hardcodedJournalEntries.length; i++) {
         var entry = hardcodedJournalEntries[i];
-        buildJournalCard(entry.id, entry.title, entry.image, entry.body);
+        buildJournalCard(entry.id, entry.title, entry.image, entry.body, entry.date);
     }
 
     document.getElementById('journals-icon-left').src = 'images/visuals-active.svg';
@@ -505,26 +505,30 @@ var hardcodedJournalEntries = [
     {   id: 'j1', 
         title: 'today was much better', 
         image: 'images/hardcoded-1.jpg', 
-        body: 'after a long week of doing work I fianlly had a day to myself, I went out with some friends and had fun at dinner.' 
+        body: 'after a long week of doing work I fianlly had a day to myself, I went out with some friends and had fun at dinner.' ,
+        date: '08/02/2026'
     },
     {   id: 'j2', 
         title: 'the things i would do', 
         image: 'images/hardcoded-2.jpg', 
-        body: 'sometimes when I am at my most overwhelmed I think of all of the things I would do if I were able to travel all of the time. I lke getting lost in my thoughts' 
+        body: 'sometimes when I am at my most overwhelmed I think of all of the things I would do if I were able to travel all of the time. I lke getting lost in my thoughts',
+        date: '08/05/2026'
     },
     {   id: 'j3', 
         title: 'i went on a walk', 
         image: 'images/hardcoded-3.jpg', 
-        body: 'I had a very stressful day at work and I just needed to go on a walk during my lunch break. I did not want to see people so instead I decided to look at the tress and the birds and I felt much better after.' 
+        body: 'I had a very stressful day at work and I just needed to go on a walk during my lunch break. I did not want to see people so instead I decided to look at the tress and the birds and I felt much better after.', 
+        date: '08/09/2026'
     },
     {   id: 'j4', 
         title: 'i am happy', 
         image: 'images/hardcoded-4.jpg', 
-        body: 'I am really putting the work into my work and also into my mental health. I feel like I am doing much better and I can confidently say that I am feeling much happier' 
+        body: 'I am really putting the work into my work and also into my mental health. I feel like I am doing much better and I can confidently say that I am feeling much happier' ,
+        date: '08/12/2026'
     }
 ];
 
-function buildJournalCard(id, title, image, body) {
+function buildJournalCard(id, title, image, body, date) {
     var journalsList = document.getElementById('journals-list');
 
     var card = document.createElement('div');
@@ -554,6 +558,12 @@ function buildJournalCard(id, title, image, body) {
         titleEl.textContent = title;
         titleBar.appendChild(titleEl);
 
+        // added this part myself when adding the dates 
+        var dateEl2 = document.createElement('p');
+        dateEl2.className = 'journal-carousel-date';
+        dateEl2.textContent = date;
+        titleBar.appendChild(dateEl2);
+
         card.appendChild(titleBar);
     } else {
         card.className = 'journal-card';
@@ -570,6 +580,11 @@ function buildJournalCard(id, title, image, body) {
         titleEl2.className = 'journal-entry-title';
         titleEl2.textContent = title;
         titleBar2.appendChild(titleEl2);
+        // added this part myself when adding the dates 
+        var dateEl = document.createElement('p');
+        dateEl.className = 'journal-entry-date';
+        dateEl.textContent = date;
+        titleBar2.appendChild(dateEl);
 
         card.appendChild(titleBar2);
     }
@@ -611,12 +626,13 @@ function renderJournalsView() {
     var savedTitle = localStorage.getItem('journalTitle');
     var savedBody = localStorage.getItem('journalBody');
 
+     // added this line myself when I was adding the hardcoded dates 
     if (savedImage && savedTitle) {
-        buildJournalCard('user-entry', savedTitle, savedImage, savedBody);
+        buildJournalCard('user-entry', savedTitle, savedImage, savedBody, '08/24/2026');
     }
 
     for (var i = 0; i < hardcodedJournalEntries.length; i++) {
         var entry = hardcodedJournalEntries[i];
-        buildJournalCard(entry.id, entry.title, entry.image, entry.body);
+        buildJournalCard(entry.id, entry.title, entry.image, entry.body, entry.date);
     }
 }
