@@ -1112,7 +1112,7 @@ label{
 
 
 /* For use on real phones that I might need later on */
-/* Written with help of AI to allow possible use on phones later on */
+/* (# AI 1) Written with help of AI*/
 @media (max-width: 420px) {
     body {
         background: #000000;

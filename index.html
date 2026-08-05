@@ -648,7 +648,7 @@
             <h2 class="journals-title">journals</h2>
             <!-- updated after I added the carosel so that these icons could have a toggle -->
             <img class="visuals-inactive" id="journals-icon-left" src="images/visuals-inactive.svg" alt="" onclick="toggleJournalsView()">
-            <img class="delete-inactive" id="journals-icon-right" src="images/delete-inactive.svg" alt="">
+            <img class="delete-inactive" id="journals-icon-right" src="images/delete-inactive.svg" alt="" onclick="DeleteMode()">
             <div class="journals-ombre"></div>
             <div class="add-entry-button" onclick="showScreen('new-journal')">
                 <span>+ add a new entry</span>
@@ -657,6 +657,7 @@
             </div>
             
             <p class="no-journals-text" id="no-journals-text">you have no active journal entries, click below to start writing</p>
+            
         
         </div>
 
@@ -732,6 +733,7 @@
 
         </div>
 
+
         <!-- Just Thoughts Popup -->
         <div id="just-thoughts-popup" class="popup-overlay">
             <div class="white-box">
@@ -780,6 +782,23 @@
             </div>
         </div>
 
+        <!-- Delete Journal Confirmation Popup -->
+        <div id="delete-journal-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/delete-popup.svg" alt="">
+                <h3 class="popup-heading">delete?</h3>
+                <p class="popup-subtext">by pressing delete you are permanently removing the journal entry selected?</p>
+                <div class="popup-buttons popup-button-outline" onclick="cancelDeleteJournal()">
+                    <span>return</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="confirmDeleteJournal()">
+                    <span>delete</span>
+                </div>
+            </div>
+        </div>
 
          <!-- Completed Meditation Popup -->
          <div id="session-complete-popup" class="popup-overlay">

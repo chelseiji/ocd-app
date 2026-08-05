@@ -43,6 +43,7 @@ function selectThoughtsOption(element, optionName) {
 
 // Has the text dissolve got the original code from @Akua Theresa Gyamfuwaa on CodePen: Disolver of Text
 //Adjusted with AI to chnage it from HTML to JS 
+// (# AI 2) Written with help of AI
 
 var dissolveCanvas = document.getElementById('dissolve-canvas');
 var dissolveCtx = dissolveCanvas.getContext('2d');
@@ -177,7 +178,7 @@ function runDissolveEffect() {
 }
 
 // Has the text fly off of the screen got the original code from @Neil Carpenter on CodePen: Fly in, Fly Out 
-//Adjusted with AI to chnage it from HTML to JS 
+// (# AI 3) Written with help of AI
 
 function runFlyEffect() {
     var textbox = document.getElementById('thoughts-textbox');
@@ -226,6 +227,7 @@ function runFlyEffect() {
 
 //  Allows the users to erase the text that is on the screen got the original code from @Valdmir Iudin on CodePen: Interactive Reveal Effect with Mouse Trail
 //Adjusted with AI for the needs of my project 
+// (# AI 4) Written with help of AI
 
 var eraseCanvas = document.getElementById('erase-canvas');
 var eraseCtx = eraseCanvas.getContext('2d');
@@ -311,7 +313,7 @@ function runEraseEffect() {
 
 /*Allows the users to crush the text that is on the screen 
 This part is fully Ai generated */
-
+// (# AI 5) Written with help of AI
 function runCrushEffect() {
     var textbox = document.getElementById('thoughts-textbox');
     var text = textbox.value.trim();
@@ -372,9 +374,10 @@ function sendThought() {
 }
 
 
-
-
 // Journal Pages - different from reflect 
+
+
+
 // basically the same as profile upload but instead replaces the placeholder image
 
 var journalImageUpload = document.getElementById('journal-image-upload');
@@ -407,6 +410,7 @@ function togglePromptDropdown() {
 
 // closes dropdown and chooses the prompt
 // this function was make with the help of AI
+// (# AI 6) Written with help of AI
 function selectPrompt(promptElement) {
     document.getElementById('prompt-dropdown-text').textContent = promptElement.textContent;
 
@@ -415,7 +419,7 @@ function selectPrompt(promptElement) {
     document.getElementById('prompt-dropdown-arrow').src = 'images/arrow-down.svg';
 }
 
-// saves the body and title in the journal for later use same functions as used earlier 
+// saves the body and title in the journal for later use same functions for local store as in meditations as used earlier 
 
 var journalTitleInput = document.getElementById('journal-title');
 journalTitleInput.addEventListener('input', function() {
@@ -437,7 +441,7 @@ function closeJournalEntryPopup() {
 }
 
 // discards everything typed/uploaded and goes back to the journals page
-// this function was make with the help of AI
+// (# AI 7) Written with help of AI
 function returnJournalHome() {
     localStorage.removeItem('journalTitle');
     localStorage.removeItem('journalBody');
@@ -457,10 +461,8 @@ function saveJournalEntry() {
     showScreen('journals');
 }
 
-
-
 // builds and displays a journal entry card on the journals page
-// this section below was made with the help of AI
+// (# AI 8) Written with help of AI
 function addJournalEntryToPage() {
     var savedImage = localStorage.getItem('journalImage');
     var savedTitle = localStorage.getItem('journalTitle');
@@ -482,7 +484,7 @@ function addJournalEntryToPage() {
 }
 
 
-// has the text show when there arent any jounrals 
+// has the text show when there arent any jounrals and has it go away when jounrals are added 
 function updateNoJournalsText() {
     var journalsList = document.getElementById('journals-list');
     var noJournalsText = document.getElementById('no-journals-text');
@@ -528,6 +530,7 @@ var hardcodedJournalEntries = [
     }
 ];
 
+// (# AI 9) Written with help of AI
 function buildJournalCard(id, title, image, body, date) {
     var journalsList = document.getElementById('journals-list');
 
@@ -540,8 +543,6 @@ function buildJournalCard(id, title, image, body, date) {
     card.onclick = function() {
         openJournalReadPage(id, title, image, body);
     };
-
-    // this section below was made with the help of AI section adapted after ading the carosel view of the journals
     if (journalsViewMode === 'carousel') {
         card.className = 'journal-carousel-card';
 
@@ -617,6 +618,7 @@ function toggleJournalsView() {
 }
 
 // the function below was made with the use of AI
+ // (# AI 10) Written with help of AI
 function renderJournalsView() {
     var journalsList = document.getElementById('journals-list');
     journalsList.innerHTML = '';
@@ -635,4 +637,57 @@ function renderJournalsView() {
         var entry = hardcodedJournalEntries[i];
         buildJournalCard(entry.id, entry.title, entry.image, entry.body, entry.date);
     }
+}
+
+
+
+// Delete Mode - this is when the user presses the trashi icons
+//for now i only have it so the user can delete the one they added, the hard code ones 
+// will have the button but you will not be able to remove them for this specific prototype
+// adds a delete marker to every card, but only the user's real entry actually deletes anything
+ // (# AI 11) Written with help of AI
+function DeleteMode() {
+    var cards = document.querySelectorAll('.journal-card, .journal-carousel-card');
+
+    for (var i = 0; i < cards.length; i++) {
+        var marker = document.createElement('img');
+        marker.className = 'delete-select-marker';
+        marker.src = 'images/delete-marker.svg';
+
+        var cardId = cards[i].getAttribute('data-id');
+        if (cardId === 'user-entry') {
+            marker.onclick = function(event) {
+                event.stopPropagation();
+                document.getElementById('delete-journal-popup').classList.add('active');
+            };
+        }
+
+        cards[i].appendChild(marker);
+    }
+
+    document.getElementById('journals-icon-right').src = 'images/delete-pressed.svg';
+}
+
+function exitDeleteMode() {
+    var markers = document.querySelectorAll('.delete-select-marker');
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].remove();
+    }
+
+    document.getElementById('journals-icon-right').src = 'images/delete-active.svg';
+}
+
+function cancelDeleteJournal() {
+    document.getElementById('delete-journal-popup').classList.remove('active');
+}
+
+
+function confirmDeleteJournal() {
+    localStorage.removeItem('journalTitle');
+    localStorage.removeItem('journalBody');
+    localStorage.removeItem('journalImage');
+
+    document.getElementById('delete-journal-popup').classList.remove('active');
+    exitDeleteMode();
+    renderJournalsView();
 }

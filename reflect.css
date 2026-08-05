@@ -206,6 +206,7 @@
 
  /*Has the text fly off of the screen got the original code from @Neil Carpenter on CodePen: Fly in, Fly Out 
 Adjusted with AI to change it for the reflection pages */
+/*(# AI 3) Written with help of AI*/
 
 .fly-letter {
     display: inline-block;
@@ -246,6 +247,7 @@ Adjusted with AI to change it for the reflection pages */
 
 /*Allows the users to erase the text that is on the screen got the original code from @Valdmir Iudin on CodePen: Interactive Reveal Effect with Mouse Trail
 Adjusted with AI for the needs of my project */
+/*(# AI 4) Written with help of AI*/
 .erase-canvas {
     position: absolute;
     width: 279px;
@@ -258,7 +260,9 @@ Adjusted with AI for the needs of my project */
 }
 
 /*Allows the users to crush the text that is on the screen 
-This part is fully Ai generated */
+(# AI 5) Written with help of AI*/
+
+/*only the text that says crush is made by ai*/
 
 .crush-letter {
     display: inline-block;
@@ -378,10 +382,12 @@ This part is fully Ai generated */
 
 #journals-list {
     position: absolute;
+    width: 100%;
+    height: 540px;
     top: 191px;
     left: 0;
-    width: 100%;
     z-index: 2;
+    overflow-y: auto;
 }
 
 .journal-entry-image {
@@ -511,6 +517,27 @@ This part is fully Ai generated */
     font-family: 'Quicksand';
     color: #3E4f45;
     text-align: center;
+}
+
+
+/* Added for Delete mode  */
+.journal-card .delete-select-marker {
+    position: absolute;
+    top: -13;
+    left: 13;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+}
+
+
+.journal-carousel-card .delete-select-marker {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
 }
 
 
