@@ -461,29 +461,6 @@ function saveJournalEntry() {
     showScreen('journals');
 }
 
-// builds and displays a journal entry card on the journals page
-// (# AI 8) Written with help of AI
-function addJournalEntryToPage() {
-    var savedImage = localStorage.getItem('journalImage');
-    var savedTitle = localStorage.getItem('journalTitle');
-    var savedBody = localStorage.getItem('journalBody');
-
-    if (!savedImage || !savedTitle) {
-        return;
-    }
-    // added this line myself when I was adding the hardcoded dates 
-    buildJournalCard('user-entry', savedTitle, savedImage, savedBody, '08/24/2026');
-
-    for (var i = 0; i < hardcodedJournalEntries.length; i++) {
-        var entry = hardcodedJournalEntries[i];
-        buildJournalCard(entry.id, entry.title, entry.image, entry.body, entry.date);
-    }
-
-    document.getElementById('journals-icon-left').src = 'images/visuals-active.svg';
-    document.getElementById('journals-icon-right').src = 'images/delete-active.svg';
-}
-
-
 // has the text show when there arent any jounrals and has it go away when jounrals are added 
 function updateNoJournalsText() {
     var journalsList = document.getElementById('journals-list');
@@ -502,33 +479,6 @@ function updateNoJournalsText() {
     }
 }
 
-// hardcoding the jounral entires 
-var hardcodedJournalEntries = [
-    {   id: 'j1', 
-        title: 'today was much better', 
-        image: 'images/hardcoded-1.jpg', 
-        body: 'after a long week of doing work I fianlly had a day to myself, I went out with some friends and had fun at dinner.' ,
-        date: '08/02/2026'
-    },
-    {   id: 'j2', 
-        title: 'the things i would do', 
-        image: 'images/hardcoded-2.jpg', 
-        body: 'sometimes when I am at my most overwhelmed I think of all of the things I would do if I were able to travel all of the time. I lke getting lost in my thoughts',
-        date: '08/05/2026'
-    },
-    {   id: 'j3', 
-        title: 'i went on a walk', 
-        image: 'images/hardcoded-3.jpg', 
-        body: 'I had a very stressful day at work and I just needed to go on a walk during my lunch break. I did not want to see people so instead I decided to look at the tress and the birds and I felt much better after.', 
-        date: '08/09/2026'
-    },
-    {   id: 'j4', 
-        title: 'i am happy', 
-        image: 'images/hardcoded-4.jpg', 
-        body: 'I am really putting the work into my work and also into my mental health. I feel like I am doing much better and I can confidently say that I am feeling much happier' ,
-        date: '08/12/2026'
-    }
-];
 
 // (# AI 9) Written with help of AI
 function buildJournalCard(id, title, image, body, date) {
@@ -633,20 +583,26 @@ function renderJournalsView() {
         buildJournalCard('user-entry', savedTitle, savedImage, savedBody, '08/24/2026');
     }
 
-    for (var i = 0; i < hardcodedJournalEntries.length; i++) {
-        var entry = hardcodedJournalEntries[i];
-        buildJournalCard(entry.id, entry.title, entry.image, entry.body, entry.date);
+    //I added this since hardhoding simplified the code a bit
+    if (journalsViewMode === 'list') {
+        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j1"><img class="hardcoded-journal" src="images/journal-1-list.svg" alt="" onclick="showScreen(\'read-journal-1\')"></div>';
+        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j2"><img class="hardcoded-journal" src="images/journal-2-list.svg" alt="" onclick="showScreen(\'read-journal-2\')"></div>';
+        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j3"><img class="hardcoded-journal" src="images/journal-3-list.svg" alt="" onclick="showScreen(\'read-journal-3\')"></div>';
+        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j4"><img class="hardcoded-journal" src="images/journal-4-list.svg" alt="" onclick="showScreen(\'read-journal-4\')"></div>';
+    } else {
+        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j1"><img class="hardcoded-journal" src="images/journal-1-carousel.svg" alt="" onclick="showScreen(\'read-journal-1\')"></div>';
+        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j2"><img class="hardcoded-journal" src="images/journal-2-carousel.svg" alt="" onclick="showScreen(\'read-journal-2\')"></div>';
+        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j3"><img class="hardcoded-journal" src="images/journal-3-carousel.svg" alt="" onclick="showScreen(\'read-journal-3\')"></div>';
+        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j4"><img class="hardcoded-journal" src="images/journal-4-carousel.svg" alt="" onclick="showScreen(\'read-journal-4\')"></div>';
     }
 }
 
-
-
-// Delete Mode - this is when the user presses the trashi icons
+// Delete Mode - this is when the user presses the trash icons
 //for now i only have it so the user can delete the one they added, the hard code ones 
 // will have the button but you will not be able to remove them for this specific prototype
 // adds a delete marker to every card, but only the user's real entry actually deletes anything
  // (# AI 11) Written with help of AI
-function DeleteMode() {
+ function DeleteMode() {
     var cards = document.querySelectorAll('.journal-card, .journal-carousel-card');
 
     for (var i = 0; i < cards.length; i++) {
@@ -668,6 +624,7 @@ function DeleteMode() {
     document.getElementById('journals-icon-right').src = 'images/delete-pressed.svg';
 }
 
+// (# AI 11) Written with help of AI
 function exitDeleteMode() {
     var markers = document.querySelectorAll('.delete-select-marker');
     for (var i = 0; i < markers.length; i++) {
