@@ -1,0 +1,94 @@
+/* CSS for the games pages */
+/* ===== GAMES PAGE ===== */
+
+.games-title {
+    position: absolute;
+    width: 111px;
+    height: 25px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: center;
+}
+
+.games-subheading {
+    position: absolute;
+    width: 199px;
+    height: 25px;
+    top: 113px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Inclusive Sans';
+    color: #6F6150;
+    text-align: center;
+}
+
+.games-frame {
+    position: absolute;
+    width: 361px;
+    height: 543px;
+    top: 156px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1px solid #D2B69B;
+    box-sizing: border-box;
+}
+
+.game-icon {
+    position: absolute;
+    width: 150px;
+    height: 224px;
+}
+
+.game-balloon-pop {
+    position: absolute;
+    top: 192px;
+    left: 40px;
+}
+
+.game-dot-follow {
+    position: absolute;
+    top: 192px;
+    right: 40px;
+}
+
+.game-spin {
+    position: absolute;
+    top: 440px;
+    left: 40px;
+}
+
+.game-organizer {
+    position: absolute;
+    top: 440px;
+    right: 40px;
+}
+
+.games-play-button {
+    position: absolute;
+    width: 361px;
+    height: 48px;
+    top: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-align: center;
+    line-height: 48px;
+}
+
+.games-play-button:active {
+    background-color: #BBA892;
+}

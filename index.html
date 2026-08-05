@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="onboarding.css">
     <link rel="stylesheet" href="meditation.css">
     <link rel="stylesheet" href="reflect.css">
+    <link rel="stylesheet" href="games.css">
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -733,6 +734,24 @@
 
         </div>
 
+        <!-- Games Page -->
+        <div id="games" class="screen">
+
+            <h2 class="games-title">mini games</h2>
+            <p class="games-subheading">a small reset for your day</p>
+            <div class="games-frame"></div>
+
+                <img class="game-icon game-balloon-pop" src="images/balloon-pop.svg" alt="balloon pop" onclick="selectGame(this, 'balloon-pop')">
+                <img class="game-icon game-dot-follow" src="images/dot-follow.svg" alt="dot follow" onclick="selectGame(this, 'dot-follow')">
+                <img class="game-icon game-spin" src="images/spin.svg" alt="spin" onclick="selectGame(this, 'spin')">
+                <img class="game-icon game-organizer" src="images/organizer.svg" alt="organizer" onclick="selectGame(this, 'organizer')">
+            
+            <div class="games-play-button" onclick="playSelectedGame()">
+                <span>play</span>
+            </div>
+
+        </div>
+
 
         <!-- Just Thoughts Popup -->
         <div id="just-thoughts-popup" class="popup-overlay">
@@ -880,5 +899,6 @@
     <script src="onboarding.js"></script>
     <script src="meditation.js"></script>
     <script src="reflect.js"></script>
+    <script src="games.js"></script>
 </body>
 </html>
