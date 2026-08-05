@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="meditation.css">
     <link rel="stylesheet" href="reflect.css">
     <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="tracker.css">
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -734,7 +735,7 @@
 
         </div>
 
-                <!-- Hardcoded Journal 1 -->
+        <!-- Hardcoded Journal 1 -->
         <div id="read-journal-1" class="screen">
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                 onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -808,6 +809,45 @@
 
         </div>
 
+        <!-- Compulsion Tracker Page -->
+        <div id="tracker" class="screen">
+
+            <h2 class="tracker-title">your journey</h2>
+            <p class="tracker-subtext">each point is a new beginning</p>
+
+            <div class="tracker-box">
+                <p class="tracker-caption">tap an entry to view or manage it</p>
+                <img class="tracker-entry-image entry-1" src="images/entry-1.svg" alt="">
+                <img class="tracker-entry-image entry-2" src="images/entry-2.svg" alt="">
+                <img class="tracker-entry-image entry-3" src="images/entry-3.svg" alt="">
+
+                <p class="tracker-entry-caption caption-1" id="tracker-caption-1">hopping out of bed</p>
+                <p class="tracker-entry-caption caption-2" id="tracker-caption-2">picking skin</p>
+                <p class="tracker-entry-caption caption-3" id="tracker-caption-3">counting in threes</p>
+            </div>
+            <div class="tracker-start-button" onclick="openNewJourneyPopup()">
+                <span>+ start a new journey</span>
+            </div>
+
+        </div>
+
+
+        <!-- Start New Journey Popup -->
+        <div id="new-journey-popup" class="popup-overlay journey-overlay">
+            <div class="journey-popup-box">
+                <div class="journey-drag-handle"></div>
+
+                <h3 class="journey-heading">+ start a new journey</h3>
+                <div class="journey-divider"></div>
+                <p class="journey-subtext">there is no wrong place to start</p>
+                <p class="journey-caption">what are you working on?</p>
+                <input type="text" class="journey-textbox" id="journey-textbox">
+
+                <div class="journey-begin-button" onclick="beginTracking()">
+                    <span>begin tracking</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Just Thoughts Popup -->
         <div id="just-thoughts-popup" class="popup-overlay">
@@ -956,5 +996,6 @@
     <script src="meditation.js"></script>
     <script src="reflect.js"></script>
     <script src="games.js"></script>
+    <script src="tracker.js"></script>
 </body>
 </html>

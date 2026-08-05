@@ -1,0 +1,351 @@
+/* CSS for the compulsion tracker pages */
+
+.tracker-title {
+    position: absolute;
+    width: 124px;
+    height: 25px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: center;
+}
+
+.tracker-subtext {
+    position: absolute;
+    width: 230px;
+    height: 25px;
+    top: 111px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Inclusive Sans', sans-serif;
+    color: #6F6150;
+    text-align: center;
+}
+
+.tracker-box {
+    position: absolute;
+    width: 361px;
+    height: 543px;
+    top: 156px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1px solid #D2B69B;
+    box-sizing: border-box;
+}
+
+.tracker-caption {
+    position: absolute;
+    width: 210px;
+    height: 25px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #6f6150;
+    text-align: left;
+}
+
+.tracker-start-button {
+    position: absolute;
+    width: 361px;
+    height: 48px;
+    top: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-align: center;
+    line-height: 48px;
+}
+
+.tracker-start-button:active {
+    background-color: #BBA892;
+}
+
+.tracker-entry-image {
+    position: absolute;
+    left: 12px;
+}
+
+.entry-1 {
+    width: 337px;
+    height: 140px;
+    top: 63px;
+    z-index: 2;
+}
+
+
+.entry-2 {
+    width: 337px;
+    height: 145px;
+    top: 185px;
+    z-index: 3;
+}
+
+
+.entry-3 {
+    width: 337px;
+    height: 143px;
+    top: 307px;
+    z-index: 4;
+}
+
+.entry-4 {
+    width: 337px;
+    height: 91px;
+    left: 12px;
+    top: 429px;
+    z-index: 1;
+}
+
+.tracker-entry-caption {
+    position: absolute;
+    left: 113px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+}
+
+.caption-1 {
+    width: 149px;
+    height: 21px;
+    top: 110px;
+    color: #3E4F45;
+    z-index: 4;
+}
+
+.caption-2 {
+    width: 149px;
+    height: 21px;
+    top: 232px;
+    color: #2F3D33;
+    z-index: 4;
+}
+
+.caption-3 {
+    width: 149px;
+    height: 21px;
+    top: 354px;
+    color: #333333;
+    z-index: 4;
+    
+}
+
+.caption-4 {
+    width: 149px;
+    height: 21px;
+    top: 474px;
+    left: 113px;
+    color: #F5F1ED;
+    z-index: 4;
+}
+
+/* New Journey Popup */
+
+.journey-overlay {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.journey-popup-box {
+    position: relative;
+    width: 100%;
+    height: 294px;
+    box-shadow: 0px -6px 11.9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0px 0px;
+    background-color: #F5F1ED;
+}
+
+.journey-drag-handle {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2.5px;
+    background-color: #DCD5C5;
+}
+
+.journey-heading {
+    position: absolute;
+    width: 217px;
+    height: 25px;
+    top: 33px;
+    left: 13px;
+    font-size: 20px;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: center;
+}
+
+.journey-divider {
+    position: absolute;
+    width: 361px;
+    height: 1px;
+    top: 70px;
+    height: 1px;
+    border-top: 1px solid #DCD5C5;
+    box-sizing: border-box;
+}
+
+.journey-subtext {
+    position: absolute;
+    width: 257px;
+    height: 25px;
+    top: 82px;
+    left: 17px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Inclusive Sans', sans-serif;
+    color: #6F6150;
+    text-align: left;
+}
+
+.journey-caption {
+    position: absolute;
+    width: 249px;
+    height: 25px;
+    top: 123px;
+    left: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #333333;
+    text-align: center;
+}
+
+.journey-textbox {
+    position: absolute;
+    width: 361px;
+    height: 46px;
+    top: 154px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #fcfcfc;
+    border: 1px solid #d9ccbe;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    color: #333333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.journey-begin-button {
+    position: absolute;
+    width: 361px;
+    height: 48px;
+    bottom: 30px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-align: center;
+    line-height: 48px;
+}
+
+.journey-begin-button:active {
+    background-color: #BBA892;
+}
+
+/* Popups for all of the entrues whent he user clicks on them*/
+
+.compulsion-overlay {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.compulsion-popup-box {
+    position: relative;
+    width: 100%;
+    height: 212px;
+    box-shadow: 0px -6px 11.9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0px 0px;
+    background-color: #F5F1ED;
+}
+
+.compulsion-drag-handle {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #DCD5C5;
+}
+
+.compulsion-popup-icon {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: 35px;
+    left: 21px;
+}
+
+.compulsion-popup-heading {
+    position: absolute;
+    width: 171px;
+    height: 24px;
+    top: 43px;
+    left: 94px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+}
+
+.compulsion-popup-subtext {
+    position: absolute;
+    width: 271px;
+    height: 21px;
+    top: 71px;
+    left: 94px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Quicksand';
+    color: #5E7645;
+    text-align: left;
+}
+
+.compulsion-button-left {
+    position: absolute;
+    width: 143px;
+    height: 77px;
+    left: 46px;
+    bottom: 16px;
+    cursor: pointer;
+}
+
+.compulsion-button-right {
+    position: absolute;
+    width: 143px;
+    height: 77px;
+    right: 46px;
+    bottom: 16px;
+    cursor: pointer;
+}

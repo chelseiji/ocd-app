@@ -567,9 +567,30 @@ function toggleJournalsView() {
     renderJournalsView();
 }
 
+// sperated the hardcoded journals from the other jounral since that one is created in a different way with features I need to save
+ // (# AI 8) Written with help of AI
+function addHardcodedJournal(id, listSrc, carouselSrc, readScreenId) {
+    var journalsList = document.getElementById('journals-list');
+
+    var wrapper = document.createElement('div');
+    wrapper.setAttribute('data-id', id);
+    wrapper.className = journalsViewMode === 'carousel' ? 'journal-carousel-card hardcoded-journal-wrapper' : 'journal-card hardcoded-journal-wrapper';
+    wrapper.onclick = function() {
+        showScreen(readScreenId);
+    };
+
+    var img = document.createElement('img');
+    img.className = 'hardcoded-journal';
+    img.src = journalsViewMode === 'carousel' ? carouselSrc : listSrc;
+
+    wrapper.appendChild(img);
+    journalsList.appendChild(wrapper);
+}
+
+
 // the function below was made with the use of AI
  // (# AI 10) Written with help of AI
-function renderJournalsView() {
+ function renderJournalsView() {
     var journalsList = document.getElementById('journals-list');
     journalsList.innerHTML = '';
     journalsList.className = journalsViewMode === 'carousel' ? 'journals-carousel' : '';
@@ -578,23 +599,14 @@ function renderJournalsView() {
     var savedTitle = localStorage.getItem('journalTitle');
     var savedBody = localStorage.getItem('journalBody');
 
-     // added this line myself when I was adding the hardcoded dates 
     if (savedImage && savedTitle) {
         buildJournalCard('user-entry', savedTitle, savedImage, savedBody, '08/24/2026');
     }
 
-    //I added this since hardhoding simplified the code a bit
-    if (journalsViewMode === 'list') {
-        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j1"><img class="hardcoded-journal" src="images/journal-1-list.svg" alt="" onclick="showScreen(\'read-journal-1\')"></div>';
-        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j2"><img class="hardcoded-journal" src="images/journal-2-list.svg" alt="" onclick="showScreen(\'read-journal-2\')"></div>';
-        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j3"><img class="hardcoded-journal" src="images/journal-3-list.svg" alt="" onclick="showScreen(\'read-journal-3\')"></div>';
-        journalsList.innerHTML += '<div class="journal-card hardcoded-journal-wrapper" data-id="j4"><img class="hardcoded-journal" src="images/journal-4-list.svg" alt="" onclick="showScreen(\'read-journal-4\')"></div>';
-    } else {
-        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j1"><img class="hardcoded-journal" src="images/journal-1-carousel.svg" alt="" onclick="showScreen(\'read-journal-1\')"></div>';
-        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j2"><img class="hardcoded-journal" src="images/journal-2-carousel.svg" alt="" onclick="showScreen(\'read-journal-2\')"></div>';
-        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j3"><img class="hardcoded-journal" src="images/journal-3-carousel.svg" alt="" onclick="showScreen(\'read-journal-3\')"></div>';
-        journalsList.innerHTML += '<div class="journal-carousel-card hardcoded-journal-wrapper" data-id="j4"><img class="hardcoded-journal" src="images/journal-4-carousel.svg" alt="" onclick="showScreen(\'read-journal-4\')"></div>';
-    }
+    addHardcodedJournal('j1', 'images/journal-1-list.svg', 'images/journal-1-carousel.svg', 'read-journal-1');
+    addHardcodedJournal('j2', 'images/journal-2-list.svg', 'images/journal-2-carousel.svg', 'read-journal-2');
+    addHardcodedJournal('j3', 'images/journal-3-list.svg', 'images/journal-3-carousel.svg', 'read-journal-3');
+    addHardcodedJournal('j4', 'images/journal-4-list.svg', 'images/journal-4-carousel.svg', 'read-journal-4');
 }
 
 // Delete Mode - this is when the user presses the trash icons
@@ -610,13 +622,10 @@ function renderJournalsView() {
         marker.className = 'delete-select-marker';
         marker.src = 'images/delete-marker.svg';
 
-        var cardId = cards[i].getAttribute('data-id');
-        if (cardId === 'user-entry') {
-            marker.onclick = function(event) {
-                event.stopPropagation();
-                document.getElementById('delete-journal-popup').classList.add('active');
-            };
-        }
+        marker.onclick = function(event) {
+            event.stopPropagation();
+            document.getElementById('delete-journal-popup').classList.add('active');
+        };
 
         cards[i].appendChild(marker);
     }
