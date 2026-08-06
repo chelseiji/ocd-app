@@ -290,11 +290,11 @@
 
 .compulsion-drag-handle {
     position: absolute;
+    width: 58px;
+    height: 5px;
     top: 14px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
-    height: 5px;
     border-radius: 2.5px;
     background-color: #DCD5C5;
 }
@@ -327,6 +327,7 @@
     left: 94px;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 600;
     font-family: 'Quicksand';
     color: #5E7645;
     text-align: left;
@@ -349,3 +350,144 @@
     bottom: 16px;
     cursor: pointer;
 }
+
+/* Popup for when users click the edit button*/
+
+.edit-popup-box {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    box-shadow: 0px -6px 11.9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0px 0px;
+    background-color: #f5f1ed;
+}
+
+.edit-icon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 30px;
+    left: 16px;
+}
+
+.edit-title {
+    position: absolute;
+    width: 39px;
+    height: 24px;
+    top: 29px;
+    left: 50px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Quicksand';
+    color: #3e4f45;
+    text-align: left;
+}
+
+.edit-divider {
+    position: absolute;
+    width: 361px;
+    height: 1px;
+    top: 64px;
+    left: 15px;
+    border-top: 1px solid #dcd5c5;
+}
+
+.edit-name-caption {
+    position: absolute;
+    width: 54px;
+    height: 25px;
+    top: 80px;
+    left: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #333333;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.edit-name-input {
+    position: absolute;
+    width: 361px;
+    height: 46px;
+    top: 111px;
+    left: 16px;
+    border-radius: 15px;
+    background-color:  #FCFCFC;
+    border: 1px solid #D9CCBE;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.edit-date-caption {
+    position: absolute;
+    width: 46px;
+    height: 25px;
+    top: 169px;
+    left: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #3e4f45;
+    text-align: center;
+}
+
+.edit-date-box {
+    position: absolute;
+    width: 361px;
+    height: 46px;
+    top: 200px;
+    left: 16px;
+}
+
+.edit-cancel-button {
+    position: absolute;
+    width: 173px;
+    height: 48px;
+    left: 16px;
+    bottom: 30px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 2px solid#7C6C5A;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 48px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #7C6C5A;
+    font-family: 'Quicksand';
+}
+
+.edit-cancel-button:active {
+    background-color: #7C6C5A;
+    color:  #FCFCFC;
+}
+
+.edit-save-button {
+    position: absolute;
+    width: 173px;
+    height: 48px;
+    right: 16px;
+    bottom: 30px;
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 48px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FCFCFC;
+    font-family: 'Quicksand';
+}
+
+.edit-save-button:active {
+    background-color: #BBA892;
+}
+

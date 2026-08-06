@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="reflect.css">
     <link rel="stylesheet" href="games.css">
     <link rel="stylesheet" href="tracker.css">
+    <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -831,6 +832,59 @@
 
         </div>
 
+        <!-- Settings Page -->
+        <div id="settings" class="screen">
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="showScreen('home')">
+
+            <h2 class="settings-title">settings</h2>
+
+            <img class="settings-profile-pic" id="settings-profile-pic" src="" alt="profile picture">
+
+            <img class="settings-edit-profile-button" src="images/edit-profile.svg" alt="edit profile picture"
+                onmousedown="this.src='images/edit-profile-pressed.svg'"
+                onmouseup="this.src='images/edit-profile.svg'"
+                ontouchstart="this.src='images/edit-profile-pressed.svg'"
+                ontouchend="this.src='images/edit-profile.svg'"
+                onclick="openProfilePicPopup()">
+
+            <input type="text" class="settings-username" id="settings-username">
+            <img class="settings-edit-name-icon" src="images/edit-pencil.svg" alt="edit name" onclick="document.getElementById('settings-username').focus()">
+            <img class="settings-option" id="settings-change-password" src="images/change-password.svg" alt="change password" onclick="showScreen('change-password')">
+            <img class="settings-option" id="settings-faq" src="images/faq.svg" alt="faq" onclick="showScreen('faq')">
+            <img class="settings-option" id="settings-contact-us" src="images/contact-us.svg" alt="contact us" onclick="showScreen('contact-us')">
+
+            <div class="settings-signout-box">
+                <div class="settings-signout-button" onclick="openSignoutPopup()">
+                    <span>sign out</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sign Out Confirmation Popup -->
+        <div id="signout-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/exclimation-icon.svg" alt="">
+                <h3 class="popup-heading">are you sure?</h3>
+                <p class="popup-subtext">by clicking yes you will be signing our of your account </p>
+                <div class="popup-buttons popup-button-outline" onclick="closeSignoutPopup()">
+                    <span>no</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="SignOut()">
+                    <span>yes</span>
+                </div>
+            </div>
+        </div>
+
         <!-- Compulsion 1 Popup -->
         <div id="compulsion-1-popup" class="popup-overlay compulsion-overlay">
             <div class="compulsion-popup-box">
@@ -1261,5 +1315,6 @@
     <script src="reflect.js"></script>
     <script src="games.js"></script>
     <script src="tracker.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>
