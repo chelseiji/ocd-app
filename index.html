@@ -865,6 +865,46 @@
             </div>
 
         </div>
+
+        <!-- Contact Us Page -->
+        <div id="contact-us" class="screen">
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="showScreen('settings')">
+
+            <h2 class="contact-title">contact us</h2>
+            <h3 class="contact-heading">how can we help</h3>
+            <p class="contact-subheading">get in touch and ask us anything</p>
+            <p class="contact-email-caption">email</p>
+            <input type="email" class="contact-email-input" id="contact-email-input" placeholder="enter your email">
+            <div class="contact-message-box">
+                <textarea class="contact-message-input" id="contact-message-input" placeholder="type your message here"></textarea>
+            </div>
+
+            <div class="contact-send-button" onclick="sendForm()">
+                <span>send</span>
+            </div>
+        </div>
+
+        <!-- Form Sent Popup -->
+        <div id="contact-popup" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/exclimation-icon.svg" alt="">
+                <h3 class="popup-heading">message sent!</h3>
+                <p class="popup-subtext">we will reach out regarding the contents of your message as soon as we can</p>
+                <div class="popup-ok-button" onclick="closeContactPopup()">
+                    <span>ok</span>
+                </div>
+            </div>
+        </div>
+
         <!-- Sign Out Confirmation Popup -->
         <div id="signout-popup" class="popup-overlay">
             <div class="white-box">

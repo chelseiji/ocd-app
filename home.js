@@ -75,3 +75,23 @@ function cancelChange() {
 function saveChange() {
     document.getElementById('profile-pic-popup').classList.remove('active');
 }
+
+
+// Contact Us Page
+
+function openContactPopup() {
+    document.getElementById('contact-popup').classList.add('active');
+}
+
+function closeContactPopup() {
+    document.getElementById('contact-popup').classList.remove('active');
+    showScreen('settings');
+}
+
+// removes the text from the inputs
+function sendForm() {
+    document.getElementById('contact-email-input').value = '';
+    document.getElementById('contact-message-input').value = '';
+
+    openContactPopup();
+}
