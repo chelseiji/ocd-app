@@ -817,9 +817,9 @@
 
             <div class="tracker-box">
                 <p class="tracker-caption">tap an entry to view or manage it</p>
-                <img class="tracker-entry-image entry-1" src="images/entry-1.svg" alt="">
-                <img class="tracker-entry-image entry-2" src="images/entry-2.svg" alt="">
-                <img class="tracker-entry-image entry-3" src="images/entry-3.svg" alt="">
+                <img class="tracker-entry-image entry-1" src="images/entry-1.svg" alt="" onclick="openCompulsionPopup(1)">
+                <img class="tracker-entry-image entry-2" src="images/entry-2.svg" alt="" onclick="openCompulsionPopup(2)">
+                <img class="tracker-entry-image entry-3" src="images/entry-3.svg" alt="" onclick="openCompulsionPopup(3)">
 
                 <p class="tracker-entry-caption caption-1" id="tracker-caption-1">hopping out of bed</p>
                 <p class="tracker-entry-caption caption-2" id="tracker-caption-2">picking skin</p>
@@ -829,6 +829,270 @@
                 <span>+ start a new journey</span>
             </div>
 
+        </div>
+
+        <!-- Compulsion 1 Popup -->
+        <div id="compulsion-1-popup" class="popup-overlay compulsion-overlay">
+            <div class="compulsion-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="compulsion-popup-icon" src="images/compulsion-1-icon.svg" alt="">
+                <h3 class="compulsion-popup-heading">1 year 3 months</h3>
+                <p class="compulsion-popup-subtext">hopping out of bed-longest streak</p>
+
+                <img class="compulsion-button-left" src="images/edit-left.svg" alt=""
+                    onmousedown="this.src='images/edit-left-pressed.svg'"
+                    onmouseup="this.src='images/edit-left.svg'"
+                    ontouchstart="this.src='images/edit-left-pressed.svg'"
+                    ontouchend="this.src='images/edit-left.svg'"
+                    onclick="openEditPopup(1)">
+                    <img class="compulsion-button-right" src="images/delete-right.svg" alt=""
+                    onmousedown="this.src='images/delete-right-pressed.svg'"
+                    onmouseup="this.src='images/delete-right.svg'"
+                    ontouchstart="this.src='images/delete-right-pressed.svg'"
+                    ontouchend="this.src='images/delete-right.svg'"
+                    onclick="openDeletePopup(1)">
+            </div>
+        </div>
+
+        <!-- Compulsion 2 Popup -->
+        <div id="compulsion-2-popup" class="popup-overlay compulsion-overlay">
+            <div class="compulsion-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="compulsion-popup-icon" src="images/compulsion-2-icon.svg" alt="">
+                <h3 class="compulsion-popup-heading">7 months 24 days</h3>
+                <p class="compulsion-popup-subtext">picking skin</p>
+
+                <img class="compulsion-button-left" src="images/edit-left.svg" alt=""
+                    onmousedown="this.src='images/edit-left-pressed.svg'"
+                    onmouseup="this.src='images/edit-left.svg'"
+                    ontouchstart="this.src='images/edit-left-pressed.svg'"
+                    ontouchend="this.src='images/edit-left.svg'"
+                    onclick="openEditPopup(2)">
+                    <img class="compulsion-button-right" src="images/delete-right.svg" alt=""
+                    onmousedown="this.src='images/delete-right-pressed.svg'"
+                    onmouseup="this.src='images/delete-right.svg'"
+                    ontouchstart="this.src='images/delete-right-pressed.svg'"
+                    ontouchend="this.src='images/delete-right.svg'"
+                    onclick="openDeletePopup(2)">
+            </div>
+        </div>
+
+        <!-- Compulsion 3 Popup -->
+        <div id="compulsion-3-popup" class="popup-overlay compulsion-overlay">
+            <div class="compulsion-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="compulsion-popup-icon" src="images/compulsion-3-icon.svg" alt="">
+                <h3 class="compulsion-popup-heading">2 months 1 day</h3>
+                <p class="compulsion-popup-subtext">counting in threes</p>
+
+                <img class="compulsion-button-left" src="images/edit-left.svg" alt=""
+                    onmousedown="this.src='images/edit-left-pressed.svg'"
+                    onmouseup="this.src='images/edit-left.svg'"
+                    ontouchstart="this.src='images/edit-left-pressed.svg'"
+                    ontouchend="this.src='images/edit-left.svg'"
+                    onclick="openEditPopup(3)">
+                    <img class="compulsion-button-right" src="images/delete-right.svg" alt=""
+                    onmousedown="this.src='images/delete-right-pressed.svg'"
+                    onmouseup="this.src='images/delete-right.svg'"
+                    ontouchstart="this.src='images/delete-right-pressed.svg'"
+                    ontouchend="this.src='images/delete-right.svg'"
+                    onclick="openDeletePopup(3)">
+            </div>
+        </div>
+
+        <!-- Compulsion 4 Popup -->
+        <div id="compulsion-4-popup" class="popup-overlay compulsion-overlay">
+            <div class="compulsion-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="compulsion-popup-icon" src="images/compulsion-4-icon.svg" alt="">
+                <h3 class="compulsion-popup-heading">1 day</h3>
+                <p class="compulsion-popup-subtext">hand washing - new entry</p>
+
+                <img class="compulsion-button-left" src="images/edit-left.svg" alt=""
+                    onmousedown="this.src='images/edit-left-pressed.svg'"
+                    onmouseup="this.src='images/edit-left.svg'"
+                    ontouchstart="this.src='images/edit-left-pressed.svg'"
+                    ontouchend="this.src='images/edit-left.svg'"
+                    onclick="openEditPopup(4)">
+                    <img class="compulsion-button-right" src="images/delete-right.svg" alt=""
+                    onmousedown="this.src='images/delete-right-pressed.svg'"
+                    onmouseup="this.src='images/delete-right.svg'"
+                    ontouchstart="this.src='images/delete-right-pressed.svg'"
+                    ontouchend="this.src='images/delete-right.svg'"
+                    onclick="openDeletePopup(4)">
+            </div>
+        </div>
+
+        <!-- Edit Popup 1 -->
+        <div id="edit-popup-1" class="popup-overlay compulsion-overlay">
+            <div class="edit-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="edit-icon" src="images/edit-pencil.svg" alt="">
+                <h3 class="edit-title">edit</h3>
+                <div class="edit-divider"></div>
+
+                <p class="edit-name-caption">name</p>
+                <input type="text" class="edit-name-input" id="edit-name-input-1" value="hopping out of bed">
+
+                <p class="edit-date-caption">date</p>
+                <img class="edit-date-box" src="images/date-box-1.svg" alt="">
+
+                <div class="edit-cancel-button" onclick="cancelEdit(1)">
+                    <span>cancel</span>
+                </div>
+                <div class="edit-save-button" onclick="saveEdit(1)">
+                    <span>save</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Popup 2 -->
+        <div id="edit-popup-2" class="popup-overlay compulsion-overlay">
+            <div class="edit-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="edit-icon" src="images/edit-pencil.svg" alt="">
+                <h3 class="edit-title">edit</h3>
+                <div class="edit-divider"></div>
+
+                <p class="edit-name-caption">name</p>
+                <input type="text" class="edit-name-input" id="edit-name-input-2" value="picking skin">
+
+                <p class="edit-date-caption">date</p>
+                <img class="edit-date-box" src="images/date-box-2.svg" alt="">
+
+                <div class="edit-cancel-button" onclick="cancelEdit(2)">
+                    <span>cancel</span>
+                </div>
+                <div class="edit-save-button" onclick="saveEdit(2)">
+                    <span>save</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Popup 3 -->
+        <div id="edit-popup-3" class="popup-overlay compulsion-overlay">
+            <div class="edit-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="edit-icon" src="images/edit-pencil.svg" alt="">
+                <h3 class="edit-title">edit</h3>
+                <div class="edit-divider"></div>
+
+                <p class="edit-name-caption">name</p>
+                <input type="text" class="edit-name-input" id="edit-name-input-3" value="counting in threes">
+
+                <p class="edit-date-caption">date</p>
+                <img class="edit-date-box" src="images/date-box-3.svg" alt="">
+
+                <div class="edit-cancel-button" onclick="cancelEdit(3)">
+                    <span>cancel</span>
+                </div>
+                <div class="edit-save-button" onclick="saveEdit(3)">
+                    <span>save</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Popup 4 -->
+        <div id="edit-popup-4" class="popup-overlay compulsion-overlay">
+            <div class="edit-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <img class="edit-icon" src="images/edit-pencil.svg" alt="">
+                <h3 class="edit-title">edit</h3>
+                <div class="edit-divider"></div>
+
+                <p class="edit-name-caption">name</p>
+                <input type="text" class="edit-name-input" id="edit-name-input-4" value="hand washing">
+
+                <p class="edit-date-caption">date</p>
+                <img class="edit-date-box" src="images/date-box-4.svg" alt="">
+
+                <div class="edit-cancel-button" onclick="cancelEdit(4)">
+                    <span>cancel</span>
+                </div>
+                <div class="edit-save-button" onclick="saveEdit(4)">
+                    <span>save</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Popup 1 -->
+        <div id="delete-popup-1" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/delete-popup.svg" alt="">
+                <h3 class="popup-heading">delete entry?</h3>
+                <p class="popup-subtext">by clicking yes you accept that this will be permanently removed from your tracker</p>
+                <div class="popup-buttons popup-button-outline" onclick="closeDeletePopup(1)">
+                    <span>no</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="confirmDelete(1)">
+                    <span>yes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Popup 2 -->
+        <div id="delete-popup-2" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/delete-popup.svg" alt="">
+                <h3 class="popup-heading">delete entry?</h3>
+                <p class="popup-subtext">aby clicking yes you accept that this will be permanently removed from your tracker</p>
+                <div class="popup-buttons popup-button-outline" onclick="closeDeletePopup(2)">
+                    <span>no</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="confirmDelete(2)">
+                    <span>yes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Popup 3 -->
+        <div id="delete-popup-3" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/delete-popup.svg" alt="">
+                <h3 class="popup-heading">delete entry?</h3>
+                <p class="popup-subtext">by clicking yes you accept that this will be permanently removed from your tracker</p>
+                <div class="popup-buttons popup-button-outline" onclick="closeDeletePopup(3)">
+                    <span>no</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="confirmDelete(3)">
+                    <span>yes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Popup 4 -->
+        <div id="delete-popup-4" class="popup-overlay">
+            <div class="white-box">
+                <div class="box-shape">
+                    <img class="green-rings" src="images/green-rings.svg" alt="">
+                </div>
+                <img class="popup-icon" src="images/delete-popup.svg" alt="">
+                <h3 class="popup-heading">delete entry?</h3>
+                <p class="popup-subtext">by clicking yes you accept that this will be permanently removed from your tracker</p>
+                <div class="popup-buttons popup-button-outline" onclick="closeDeletePopup(4)">
+                    <span>no</span>
+                </div>
+                <div class="popup-buttons popup-button-filled" onclick="confirmDelete(4)">
+                    <span>yes</span>
+                </div>
+            </div>
         </div>
 
 
