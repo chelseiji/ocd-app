@@ -23,7 +23,7 @@
     top: 121px;
     left: 50%;
     transform: translateX(-50%);
-    filter: drop-shadow(0px 7px 13.9px #5d7589);
+    filter: drop-shadow(0px 7px 13.9px #BBA892);
     max-width: 100%;
     overflow: hidden;
     object-fit: cover;
@@ -44,7 +44,7 @@
     width: 90px;
     height: 29px;
     top: 343px;
-    left: 120px;
+    left: 143px;
     font-size: 24px;
     text-decoration: underline;
     font-weight: 600;
@@ -58,7 +58,7 @@
 
 .settings-edit-name-icon {
     position: absolute;
-    top: 343px;
+    top: 345px;
     left: calc(50% + 50px);
     width: 20px;
     height: 20px;
@@ -81,6 +81,18 @@
 
 #settings-contact-us {
     top: 578px;
+}
+
+.settings-shadow {
+    position: absolute;
+    width: 361px;
+    height: 330px;
+    top: 413px;
+    left: 16px;
+    border-radius: 0px 0px 15px 15px;
+    background-color: transparent;
+    box-shadow: 0px 9px 20.1px rgba(210, 182, 155, 0.66);
+    z-index: 0;
 }
 
 .settings-signout-box {
@@ -110,5 +122,138 @@
 }
 
 .settings-signout-button:active {
+    background-color: #BBA892;
+}
+
+
+
+
+/* Profile picture popup*/
+
+.profile-pic-popup-box {
+    position: relative;
+    width: 100%;
+    height: 661px;
+    box-shadow: 0px -6px 11.9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0px 0px;
+    background-color: #F5F1ED;
+}
+
+.profile-pic-header {
+    position: absolute;
+    width: 138px;
+    height: 24px;
+    top: 28px;
+    left: 17px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #3e4f45;
+    text-align: left;
+}
+
+.profile-pic-divider {
+    position: absolute;
+    top: 64px;
+    left: 16px;
+    width: 361px;
+    height: 1px;
+    border-top: 1px solid #DCD5C5;
+    box-sizing: border-box;
+}
+
+.profile-pic-option {
+    position: absolute;
+    width: 119px;
+    height: 119px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.profile-pic-option.selected {
+    border: 2px solid #7C6C5A;
+}
+
+.option-1-profile {
+    top: 125px;
+    left: 40px;
+}
+
+.option-2-profile {
+    top: 125px;
+    right: 40px;
+}
+
+.option-3-profile {
+    top: 294px;
+    left: 40px;
+}
+
+.option-4-profile {
+    top: 294px;
+    right: 40px;
+}
+
+.profile-pic-upload-label {
+    position: absolute;
+    width: 119px;
+    height: 119px;
+    top: 433px;
+    left: 142px;
+    display: block;
+    cursor: pointer;
+}
+
+.pic-option-upload {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+.profile-pic-cancel-button {
+    position: absolute;
+    width: 173px;
+    height: 48px;
+    left: 16px;
+    bottom: 22px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 2px solid #7C6C5A;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #7C6C5A;
+    font-family: 'Quicksand';
+}
+
+.profile-pic-cancel-button:active {
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+}
+
+.profile-pic-save-button {
+    position: absolute;
+    width: 173px;
+    height: 48px;
+    right: 16px;
+    bottom: 22px;
+    border-radius: 15px;
+    background-color:#7C6C5A;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FCFCFC;
+    font-family: 'Quicksand';
+}
+
+.profile-pic-save-button:active {
     background-color: #BBA892;
 }

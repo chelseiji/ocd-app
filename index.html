@@ -843,9 +843,7 @@
                 onclick="showScreen('home')">
 
             <h2 class="settings-title">settings</h2>
-
             <img class="settings-profile-pic" id="settings-profile-pic" src="" alt="profile picture">
-
             <img class="settings-edit-profile-button" src="images/edit-profile.svg" alt="edit profile picture"
                 onmousedown="this.src='images/edit-profile-pressed.svg'"
                 onmouseup="this.src='images/edit-profile.svg'"
@@ -854,6 +852,7 @@
                 onclick="openProfilePicPopup()">
 
             <input type="text" class="settings-username" id="settings-username">
+            <div class="settings-shadow"></div>
             <img class="settings-edit-name-icon" src="images/edit-pencil.svg" alt="edit name" onclick="document.getElementById('settings-username').focus()">
             <img class="settings-option" id="settings-change-password" src="images/change-password.svg" alt="change password" onclick="showScreen('change-password')">
             <img class="settings-option" id="settings-faq" src="images/faq.svg" alt="faq" onclick="showScreen('faq')">
@@ -866,7 +865,6 @@
             </div>
 
         </div>
-
         <!-- Sign Out Confirmation Popup -->
         <div id="signout-popup" class="popup-overlay">
             <div class="white-box">
@@ -881,6 +879,32 @@
                 </div>
                 <div class="popup-buttons popup-button-filled" onclick="SignOut()">
                     <span>yes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Picture Popup -->
+        <div id="profile-pic-popup" class="popup-overlay compulsion-overlay">
+            <div class="profile-pic-popup-box">
+                <div class="compulsion-drag-handle"></div>
+
+                <h3 class="profile-pic-header">profile picture</h3>
+                <div class="profile-pic-divider"></div>
+                <img class="profile-pic-option option-1-profile" src="images/profile-1.svg" alt="profile 1" onclick="selectSettingsProfile(this)">
+                <img class="profile-pic-option option-2-profile" src="images/profile-2.svg" alt="profile 2" onclick="selectSettingsProfile(this)">
+                <img class="profile-pic-option option-3-profile" src="images/profile-3.svg" alt="profile 3" onclick="selectSettingsProfile(this)">
+                <img class="profile-pic-option option-4-profile" src="images/profile-4.svg" alt="profile 4" onclick="selectSettingsProfile(this)">
+
+                <label class="profile-pic-upload-label" for="settings-profile-upload">
+                    <img class="pic-option-upload" id="uploaded-image" src="images/upload-circle.svg">
+                </label>
+
+                <input type="file" accept="image/*" id="settings-profile-upload" style="display: none;">
+                <div class="profile-pic-cancel-button" onclick="cancelChange()">
+                    <span>cancel</span>
+                </div>
+                <div class="profile-pic-save-button" onclick="saveChange()">
+                    <span>save</span>
                 </div>
             </div>
         </div>
