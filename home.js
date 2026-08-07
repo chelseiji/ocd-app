@@ -122,3 +122,47 @@ function saveNewPassword() {
     }
     localStorage.setItem('password', newPassword);
 }
+
+
+// FAQ Page
+//inspo gotten from @W3 schools: How TO - Collapsibles/Accordion
+// (# AI 13) Written with help of AI
+var acc = document.getElementsByClassName("faq-question-box");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    var image = this.nextElementSibling;
+    var arrow = this.lastElementChild;
+
+    if (image.classList.contains("open")) {
+      image.classList.remove("open");
+      arrow.src = 'images/arrow-down-faq.svg';
+    } else {
+      image.classList.add("open");
+      arrow.src = 'images/arrow-up-faq.svg';
+    }
+
+    repositionFaqItems();
+  });
+}
+
+function repositionFaqItems() {
+    var runningTop = 182;
+    for (var i = 1; i <= 5; i++) {
+        var faqBox = document.getElementById('faq-box-' + i);
+        var answerImage = document.getElementById('faq-answer-' + i);
+
+        faqBox.style.top = runningTop + 'px';
+
+        var thisItemHeight = 46;
+        if (answerImage.classList.contains("open")) {
+            thisItemHeight += 125 + 10;
+        }
+
+        runningTop += thisItemHeight + 20;
+    }
+
+    
+    document.getElementById('faq-more-questions').style.top = runningTop + 'px';
+}
