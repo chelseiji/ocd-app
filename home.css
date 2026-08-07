@@ -384,3 +384,224 @@
 .contact-send-button:active {
     background-color: #BBA892;
 }
+
+
+
+/* Change Password Page */
+
+.change-password-title {
+    position: absolute;
+    width: 170px;
+    height: 25px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+    text-align: center;
+}
+
+.change-password-email-caption {
+    position: absolute;
+    width: 52px;
+    height: 25px;
+    top: 176px;
+    left: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+}
+
+.change-password-email-input {
+    position: absolute;
+    width: 361px;
+    height: 46px;
+    top: 212px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1px solid #BBA892;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.change-current-password-caption {
+    position: absolute;
+    width: 166px;
+    height: 25px;
+    top: 282px;
+    left: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+}
+
+.change-current-password-input {
+    position: absolute;
+    width: 361px;
+    height: 46px;
+    top: 318px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1px solid #BBA892;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.change-password-forgot {
+    position: absolute;
+    width: 115px;
+    height: 27px;
+    top: 382px;
+    right: 19px;
+    border-radius: 8px;
+    border: 1.5px solid #7C6C5A;
+    text-align: center;
+    font-size: 11px;
+    font-family: 'Quicksand';
+    color: #7C6C5A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.change-password-forgot:active {
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+}
+
+.change-password-divider {
+    position: absolute;
+    width: 361px;
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #bba892;
+    box-sizing: border-box;
+}
+
+.divider-1 {
+    top: 145px;
+}
+
+.divider-2 {
+    top: 440px;
+}
+
+.new-password-caption {
+    position: absolute;
+    width: 135px;
+    height: 25px;
+    top: 470px;
+    left: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+}
+
+.new-password-input {
+    position: absolute;
+    width: 361px;
+    height: 46px;
+    top: 506px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1px solid #BBA892;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.new-password-eye {
+    position: absolute;
+    top: 520px;
+    right: 37px;
+    z-index: 2;
+}
+
+.confirm-new-password-caption {
+    position: absolute;
+    width: 174px;
+    height: 25px;
+    top: 576px;
+    left: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #3E4F45;
+}
+
+.confirm-new-password-input {
+    position: absolute;
+    width: 361px;
+    height: 46px;
+    top: 612px;
+    left: 16px;
+    border-radius: 15px;
+    background-color: #FCFCFC;
+    border: 1px solid #BBA892;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.confirm-new-password-eye {
+    position: absolute;
+    top: 626px;
+    right: 37px;
+    z-index: 2;
+}
+
+.change-password-save-button {
+    position: absolute;
+    width: 361px;
+    height: 48px;
+    top: 702px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: #7C6C5A;
+    color: #FCFCFC;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-align: center;
+    line-height: 48px;
+}
+
+.change-password-save-button:active {
+    background-color: #BBA892;
+}

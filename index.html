@@ -890,6 +890,44 @@
             </div>
         </div>
 
+        <!-- Change Password Page -->
+        <div id="change-password" class="screen">
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="showScreen('settings')">
+
+            <h2 class="change-password-title">change password</h2>
+            <div class="change-password-divider divider-1"></div>
+
+            <p class="change-password-email-caption">email</p>
+            <input type="email" class="change-password-email-input" id="change-password-email-input" readonly>
+            <p class="change-current-password-caption">current password</p>
+            <input type="password" class="change-current-password-input" id="change-current-password-input" readonly>
+
+            <div class="change-password-forgot" onclick="showScreen('authentication')">
+                <span>forgot password?</span>
+            </div>
+
+            <div class="change-password-divider divider-2"></div>
+            
+            <p class="new-password-caption">new password</p>
+            <input type="password" class="new-password-input" id="new-password-input" >
+            <img class="eye-icon new-password-eye" src="images/eye-closed.svg" alt="show password" onclick="togglePassword('new-password-input', this)">
+            
+            <p class="confirm-new-password-caption">confirm password</p>
+            <input type="password" class="confirm-new-password-input" id="confirm-new-password-input">
+            <img class="eye-icon confirm-new-password-eye" src="images/eye-closed.svg" alt="show password" onclick="togglePassword('confirm-new-password-input', this)">
+            
+            <div class="change-password-save-button" onclick="saveNewPassword()">
+                <span>save</span>
+            </div>
+
+        </div>
+
         <!-- Form Sent Popup -->
         <div id="contact-popup" class="popup-overlay">
             <div class="white-box">

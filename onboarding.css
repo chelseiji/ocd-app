@@ -558,7 +558,10 @@ label{
     font-size: 16px;
     font-weight: 500;
     color: #3E4F45;
-    padding: 0 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .reg-continue-button {
@@ -684,7 +687,6 @@ label{
     background-color: #FCFCFC; /* fixed colors they were off do in figma later */
     border: 1px solid #7C6C5A;
     box-sizing: border-box;
-    cursor: pointer;
 }
 
 .remember-filled{
@@ -719,7 +721,6 @@ label{
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .forgot-password {
@@ -888,7 +889,6 @@ label{
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .popup-ok-button:active {

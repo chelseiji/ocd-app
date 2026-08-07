@@ -95,3 +95,30 @@ function sendForm() {
 
     openContactPopup();
 }
+
+// Change Password page 
+
+// adds the users saved email and passowrd to the text fiedls
+function passwordEmailInfo() {
+    var savedEmail = localStorage.getItem('email');
+    if (savedEmail) {
+        document.getElementById('change-password-email-input').value = savedEmail;
+    }
+
+    var savedPassword = localStorage.getItem('password');
+    if (savedPassword) {
+        document.getElementById('change-current-password-input').value = savedPassword;
+    }
+}
+
+// basically same funtion as the one in onboarding
+//seess in the two new terms are the same and then saves the new password
+function saveNewPassword() {
+    var newPassword = document.getElementById('new-password-input').value;
+    var confirmPassword = document.getElementById('confirm-new-password-input').value;
+
+    if (newPassword !== confirmPassword) {
+        return;
+    }
+    localStorage.setItem('password', newPassword);
+}

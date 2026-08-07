@@ -40,7 +40,6 @@ function Registration() {
         errorText.classList.add('show');
         return;
     }
-
     errorText.classList.remove('show');
     showScreen('termsandconditions');
 }
@@ -101,8 +100,40 @@ function getImgData() {
 
 // Saves the username 
 var nicknameInput = document.getElementById('nickname-input');
+
 nicknameInput.addEventListener('input', function() {
     localStorage.setItem('username', nicknameInput.value);
+});
+
+//I added these later on sicne i forgot to save them 
+//needed for the chnage password page 
+
+// saves the email in registration
+var regEmailInput = document.getElementById('email-input');
+
+regEmailInput.addEventListener('input', function() {
+    localStorage.setItem('email', regEmailInput.value);
+});
+
+// saves the email in sign in
+var signinEmailInput = document.getElementById('signin-email-input');
+
+signinEmailInput.addEventListener('input', function() {
+    localStorage.setItem('email', signinEmailInput.value);
+});
+
+// saves the password in registration
+var regPasswordInput = document.getElementById('password-input');
+
+regPasswordInput.addEventListener('input', function() {
+    localStorage.setItem('password', regPasswordInput.value);
+});
+
+// saves the password in sign in
+var signinPasswordInput = document.getElementById('signin-password-input');
+
+signinPasswordInput.addEventListener('input', function() {
+    localStorage.setItem('password', signinPasswordInput.value);
 });
 
 // Saves the profile pic that the users chose 

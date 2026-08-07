@@ -33,9 +33,13 @@ function showScreen(screenNumber){
         settingsInfo();
     }
 
+    //for seetings page to have all the profile and name info
+    if (screenNumber === 'change-password') {
+        passwordEmailInfo();
+    }
+
 
 }
-
 
 //Opens popups
 function openPopup() {
