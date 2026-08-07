@@ -832,6 +832,56 @@
 
         </div>
 
+
+        <!-- Home Page -->
+        <div id="home" class="screen">
+
+            <img class="home-profile-pic" id="home-profile-pic" src="" alt="profile picture">
+            <img class="home-settings-button" src="images/settings-icon.svg" alt="settings" onclick="showScreen('settings')">
+            <h1 class="home-greeting" id="home-greeting">hello, </h1>
+            <div class="home-divider"></div>
+            <p class="home-subheading">how are you feeling right now</p>
+            <h2 class="home-recommended-title">recommended features</h2>
+
+            <div class="home-emotions-row">
+                <img class="home-emotion" src="images/fatigue.svg" alt="" onclick="selectEmotion('fatigue')">
+                <img class="home-emotion" src="images/happy.svg" alt="" onclick="selectEmotion('happy')">
+                <img class="home-emotion" src="images/sad.svg" alt="" onclick="selectEmotion('sad')">
+                <img class="home-emotion" src="images/stress.svg" alt="" onclick="selectEmotion('stress')">
+                <img class="home-emotion" src="images/worry.svg" alt="" onclick="selectEmotion('worry')">
+                <img class="home-emotion" src="images/frustration.svg" alt="" onclick="selectEmotion('frustration')">
+            </div>
+            
+            <p class="home-quote" id="home-quote"></p>
+            
+            <div class="home-feature-card feature-1" onclick="showScreen('meditation')">
+                <img class="home-feature-image" src="images/meditation-feature.svg" alt="">
+                <h3 class="home-feature-title" id="feature-title-1"></h3>
+                <p class="home-feature-subtext" id="feature-subtext-1"></p>
+            </div>
+            
+            <div class="home-feature-card feature-2" onclick="showScreen('games')">
+                <img class="home-feature-image" src="images/game-feature.svg" alt="">
+                <h3 class="home-feature-title" id="feature-title-2"></h3>
+                <p class="home-feature-subtext" id="feature-subtext-2"></p>
+            </div>
+            
+            <div class="home-feature-card feature-3" onclick="showScreen('reflect')">
+                <img class="home-feature-image" src="images/reflect-feature.svg" alt="">
+                <h3 class="home-feature-title" id="feature-title-3"></h3>
+                <p class="home-feature-subtext" id="feature-subtext-3"></p>
+            </div>
+            
+            <div class="home-feature-card feature-4" onclick="showScreen('tracker')">
+                <img class="home-feature-image" src="images/track-feature.svg" alt="">
+                <h3 class="home-feature-title" id="feature-title-4"></h3>
+                <p class="home-feature-subtext" id="feature-subtext-4"></p>
+            </div>
+
+
+        </div>
+
+
         <!-- Settings Page -->
         <div id="settings" class="screen">
 
@@ -928,71 +978,71 @@
 
         </div>
 
-     <!-- FAQ Page -->
-    <div id="faq" class="screen">
+        <!-- FAQ Page -->
+        <div id="faq" class="screen">
 
-        <img class="back-button" src="images/back-icon.svg" alt="back button"
-            onmousedown="this.src='images/back-icon-pressed.svg'"
-            onmouseup="this.src='images/back-icon.svg'"
-            ontouchstart="this.src='images/back-icon-pressed.svg'"
-            ontouchend="this.src='images/back-icon.svg'"
-            onclick="showScreen('settings')">
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="showScreen('settings')">
 
-        <h2 class="faq-title">faq's</h2>
-        <div class="faq-divider"></div>
+            <h2 class="faq-title">faq's</h2>
+            <div class="faq-divider"></div>
 
-        <div class="faq-box" id="faq-box-1">
-            <div class="faq-question-box">
-                <span class="faq-question-text">is my information safe?</span>
-                <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
-            </div>
-            <img class="faq-answer-image" id="faq-answer-1" src="images/answer-1.svg" alt="">
-            </div>
- 
+            <div class="faq-box" id="faq-box-1">
+                <div class="faq-question-box">
+                    <span class="faq-question-text">is my information safe?</span>
+                    <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
+                </div>
+                <img class="faq-answer-image" id="faq-answer-1" src="images/answer-1.svg" alt="">
+                </div>
+    
 
-        <div class="faq-box" id="faq-box-2">
-            <div class="faq-question-box">
-                <span class="faq-question-text">is there a website?</span>
-                <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
-            </div>
-            <img class="faq-answer-image" id="faq-answer-2" src="images/answer-2.svg" alt="">
-            </div>
-      
+            <div class="faq-box" id="faq-box-2">
+                <div class="faq-question-box">
+                    <span class="faq-question-text">is there a website?</span>
+                    <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
+                </div>
+                <img class="faq-answer-image" id="faq-answer-2" src="images/answer-2.svg" alt="">
+                </div>
+        
 
-        <div class="faq-box" id="faq-box-3">
-            <div class="faq-question-box">
-                <span class="faq-question-text">why is my app glitching?</span>
-                <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
-            </div>
-            <img class="faq-answer-image" id="faq-answer-3" src="images/answer-3.svg" alt="">
-            </div>
-     
+            <div class="faq-box" id="faq-box-3">
+                <div class="faq-question-box">
+                    <span class="faq-question-text">why is my app glitching?</span>
+                    <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
+                </div>
+                <img class="faq-answer-image" id="faq-answer-3" src="images/answer-3.svg" alt="">
+                </div>
+        
 
-        <div class="faq-box" id="faq-box-4">
-            <div class="faq-question-box">
-                <span class="faq-question-text">do I need a formal diagnosis?</span>
-                <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
-            </div>
-            <img class="faq-answer-image" id="faq-answer-4" src="images/answer-4.svg" alt="">
+            <div class="faq-box" id="faq-box-4">
+                <div class="faq-question-box">
+                    <span class="faq-question-text">do I need a formal diagnosis?</span>
+                    <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
+                </div>
+                <img class="faq-answer-image" id="faq-answer-4" src="images/answer-4.svg" alt="">
+                </div>
+
+            <div class="faq-box" id="faq-box-5">
+                <div class="faq-question-box">
+                    <span class="faq-question-text">are there any hidden fees?</span>
+                    <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
+                </div>
+                <img class="faq-answer-image" id="faq-answer-5" src="images/answer-5.svg" alt="">
+                </div>
+
+            <div class="faq-more-questions" id="faq-more-questions">
+                <h3 class="faq-more-heading">have more questions</h3>
+                <p class="faq-more-subtext">no worries! reach out to us through our contact form!</p>
+                <div class="faq-contact-button" onclick="showScreen('contact-us')">
+                    <span>contact us</span>
+                </div>
             </div>
 
-        <div class="faq-box" id="faq-box-5">
-            <div class="faq-question-box">
-                <span class="faq-question-text">are there any hidden fees?</span>
-                <img class="faq-arrow" src="images/arrow-down-faq.svg" alt="">
-            </div>
-            <img class="faq-answer-image" id="faq-answer-5" src="images/answer-5.svg" alt="">
-            </div>
-
-        <div class="faq-more-questions" id="faq-more-questions">
-            <h3 class="faq-more-heading">have more questions</h3>
-            <p class="faq-more-subtext">no worries! reach out to us through our contact form!</p>
-            <div class="faq-contact-button" onclick="showScreen('contact-us')">
-                <span>contact us</span>
-            </div>
         </div>
-
-    </div>
 
         <!-- Form Sent Popup -->
         <div id="contact-popup" class="popup-overlay">

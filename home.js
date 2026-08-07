@@ -1,5 +1,106 @@
 //JS for homepage flow
 
+//Homepage 
+// fills in the profile picture and greeting name whenever the home page loads
+function homeInfo() {
+    var savedProfile = localStorage.getItem('profileImage');
+    var savedName = localStorage.getItem('username');
+    if (savedProfile) {
+        document.getElementById('home-profile-pic').src = savedProfile;
+    }
+    if (savedName) {
+        document.getElementById('home-greeting').textContent = 'hello, ' + savedName;
+    }
+}
+
+var emotionData = {
+    fatigue: {
+        quote: "exhaustion can be heavy, you can fly again”",
+        features: [
+            { title: 'calming sleep meditation', subtext: '10 minutes' },
+            { title: 'dot follow', subtext: 'mini game' },
+            { title: 'rejuvenate the mind', subtext: 'journaling' },
+            { title: 'view your growth', subtext: 'your journey' }
+        ]
+    },
+    happy: {
+        quote: "bask in in your joy for a little longer today",
+        features: [
+            { title: 'focus meditation', subtext: '30 minutes' },
+            { title: 'have some fun', subtext: 'min games' },
+            { title: 'remember your joy', subtext: 'jounraling' },
+            { title: 'track your progress', subtext: 'your journey' }
+        ]
+    },
+    sad: {
+        quote: "sadness can visit, but do not let it unpack",
+        features: [
+            { title: 'uplift your mood', subtext: '10 minutes' },
+            { title: 'popping balloons', subtext: 'mini game' },
+            { title: 'release your feelings', subtext: 'just thougths' },
+            { title: 'distract by organizing', subtext: 'mini game' }
+        ]
+    },
+    stress: {
+        quote: "stress will come and go, this too shall pass",
+        features: [
+            { title: 'reduce stress meditation', subtext: '10 minutes' },
+            { title: 'popping balloons', subtext: 'mini game' },
+            { title: 'release what on your mind', subtext: 'just thoughts' },
+            { title: 'soothing body meditation', subtext: '20 minutes' }
+        ]
+    },
+    worry: {
+        quote: "come and breathe, be the light you need",
+        features: [
+            { title: 'soothin rain sounds', subtext: '10 minutes' },
+            { title: 'spin to relax', subtext: 'mini game' },
+            { title: 'write about new ideas', subtext: 'journaling' },
+            { title: 'focus on the good', subtext: '20 minutes' }
+        ]
+    },
+    frustration: {
+        quote: "anger burns bright, but do not let it lead",
+        features: [
+            { title: 'calming meditation', subtext: '20 minutes' },
+            { title: 'distract by popping', subtext: 'mini game' },
+            { title: 'let go of your anger', subtext: 'just thoughts' },
+            { title: 'relax by organizing', subtext: 'mini game' }
+        ]
+    }
+};
+
+var currentEmotion = null;
+
+// Whwhn the motion is selected this calls the hardcoded features and quote 
+function selectEmotion(name) {
+    var allEmotions = document.querySelectorAll('.home-emotion');
+    //array of names 0-5
+    var emotionNames = ['fatigue', 'happy', 'sad', 'stress', 'worry', 'frustration'];
+
+    for (var i = 0; i < allEmotions.length; i++) {
+        allEmotions[i].src = 'images/' + emotionNames[i] + '.svg';
+    }
+
+    var clickedIndex = emotionNames.indexOf(name);
+    allEmotions[clickedIndex].src = 'images/' + name + '-pressed.svg';
+    currentEmotion = name;
+
+    var data = emotionData[name];
+    //this is what puts the quote in quotations 
+    document.getElementById('home-quote').textContent = '"' + data.quote + '"';
+
+     //tgoes through the array and based on the numebr chnages the title and subtext for the 4 features
+    for (var j = 0; j < 4; j++) {
+        var featureNumber = j + 1;
+        document.getElementById('feature-title-' + featureNumber).textContent = data.features[j].title;
+        document.getElementById('feature-subtext-' + featureNumber).textContent = data.features[j].subtext;
+    }
+}
+
+
+//Settings
+
 // adds the sved profile picture from the onboarding to the seeting page
 function settingsInfo() {
     var savedProfile = localStorage.getItem('profileImage');

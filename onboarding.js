@@ -155,6 +155,6 @@ function accountSetup() {
 
 function startPrehomeLoading() {
     setTimeout(function() {
-        showScreen('homescreen'); 
+        showScreen('home'); 
     }, 7000);
 }

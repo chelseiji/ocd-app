@@ -28,6 +28,11 @@ function showScreen(screenNumber){
         updateNoJournalsText();
     }
 
+    //infor from onboarding put on homepage
+    if (screenNumber === 'home') {
+        homeInfo();
+    }
+
     //for seetings page to have all the profile and name info
     if (screenNumber === 'settings') {
         settingsInfo();
