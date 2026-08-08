@@ -329,7 +329,7 @@
             </div>
 
             <!-- Meditation Homepage -->
-            <div id="meditation" class="screen">
+            <div id="meditation" class="screen" data-nav="meditation">
                 <h2 class="meditation-title">meditation</h2>
                 <div class="meditation-divider1"></div>
                 <h3 class="visuals-title">visuals</h3>
@@ -410,7 +410,7 @@
         </div>
 
         <!-- Meditation Timer Page -->
-        <div id="meditation-timer" class="screen">
+        <div id="meditation-timer" class="screen" data-nav="meditation">
 
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                 onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -584,7 +584,7 @@
         </div>
 
         <!-- Reflect Page 1 -->
-        <div id="reflect" class="screen">
+        <div id="reflect" class="screen" data-nav="reflect">
 
             <h2 class="reflect-title">reflect</h2>
             <p class="reflect-subtext">what do you need right now?</p>
@@ -594,7 +594,7 @@
         </div>
 
          <!-- Just Thoughts Page -->
-         <div id="just-thoughts" class="screen">
+         <div id="just-thoughts" class="screen" data-nav="reflect">
             <h2 class="just-thoughts-title">just thoughts</h2>
             <img class="back-button" src="images/back-icon.svg" alt="back button"
             onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -639,7 +639,7 @@
         </div>
 
          <!-- Journals Page -->
-         <div id="journals" class="screen">
+         <div id="journals" class="screen" data-nav="reflect">
 
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                  onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -665,7 +665,7 @@
         </div>
 
         <!-- New Journal Entry Page -->
-        <div id="new-journal" class="screen">
+        <div id="new-journal" class="screen" data-nav="reflect">
 
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                 onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -793,7 +793,7 @@
         </div>
 
         <!-- Games Page -->
-        <div id="games" class="screen">
+        <div id="games" class="screen" data-nav="games">
 
             <h2 class="games-title">mini games</h2>
             <p class="games-subheading">a small reset for your day</p>
@@ -811,7 +811,7 @@
         </div>
 
         <!-- Compulsion Tracker Page -->
-        <div id="tracker" class="screen">
+        <div id="tracker" class="screen" data-nav="tracker">
 
             <h2 class="tracker-title">your journey</h2>
             <p class="tracker-subtext">each point is a new beginning</p>
@@ -832,9 +832,8 @@
 
         </div>
 
-
         <!-- Home Page -->
-        <div id="home" class="screen">
+        <div id="home" class="screen" data-nav="home">
 
             <img class="home-profile-pic" id="home-profile-pic" src="" alt="profile picture">
             <img class="home-settings-button" src="images/settings-icon.svg" alt="settings" onclick="showScreen('settings')">
@@ -881,9 +880,8 @@
 
         </div>
 
-
         <!-- Settings Page -->
-        <div id="settings" class="screen">
+        <div id="settings" class="screen" data-nav="home">
 
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                 onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -917,7 +915,7 @@
         </div>
 
         <!-- Contact Us Page -->
-        <div id="contact-us" class="screen">
+        <div id="contact-us" class="screen" data-nav="home">
 
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                 onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -941,7 +939,7 @@
         </div>
 
         <!-- Change Password Page -->
-        <div id="change-password" class="screen">
+        <div id="change-password" class="screen" data-nav="home">
 
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                 onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -979,7 +977,7 @@
         </div>
 
         <!-- FAQ Page -->
-        <div id="faq" class="screen">
+        <div id="faq" class="screen" data-nav="home">
 
             <img class="back-button" src="images/back-icon.svg" alt="back button"
                 onmousedown="this.src='images/back-icon-pressed.svg'"
@@ -1523,7 +1521,30 @@
             </div>
 
 
-    </div>
+        </div>
+
+        <div class="nav-bar" id="nav-bar">
+            <div class="nav-line" id="nav-line-home"></div>
+            <img class="nav-icon" id="nav-home" src="images/nav-home.svg" alt="home" onclick="showScreen('home')">
+            <p class="nav-label" id="nav-label-home">home</p>
+        
+            <div class="nav-line" id="nav-line-meditation"></div>
+            <img class="nav-icon" id="nav-meditation" src="images/nav-meditation.svg" alt="meditation" onclick="showScreen('meditation')">
+            <p class="nav-label" id="nav-label-meditation">meditate</p>
+
+            <div class="nav-line" id="nav-line-tracker"></div>
+            <img class="nav-icon" id="nav-tracker" src="images/nav-tracker.svg" alt="tracker" onclick="showScreen('tracker')">
+            <p class="nav-label" id="nav-label-tracker">track</p>
+        
+            <div class="nav-line" id="nav-line-reflect"></div>
+            <img class="nav-icon" id="nav-reflect" src="images/nav-reflect.svg" alt="tracker" onclick="showScreen('reflect')">
+            <p class="nav-label" id="nav-label-reflect">reflect</p>
+
+            <div class="nav-line" id="nav-line-games"></div>
+            <img class="nav-icon" id="nav-games" src="images/nav-games.svg" alt="tracker" onclick="showScreen('games')">
+            <p class="nav-label" id="nav-label-games">game</p>
+            
+        </div>
 </div>
 
 

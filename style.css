@@ -70,3 +70,194 @@ body {
 .screen.active {
     display: flex;
 }
+
+
+.nav-bar{
+    position: absolute;
+    display: none;
+    width: 361px;
+    height: 56px;
+    left: 16px;
+    bottom: 12px;
+    box-shadow: 3px -3px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 100px;
+    background-color: #E3E7DF;
+}
+
+.nav-line {
+    display: none;
+    width: 37px;
+    height: 3px;
+    border-radius: 100px;
+    background-color: #3E4F45;
+}
+
+.nav-line.show {
+    display: block;
+}
+
+/* home button*/
+#nav-home {
+    position: absolute;
+    width: 24px;
+    height: 25px;
+    bottom: 23px;
+    left: 32px;
+    
+}
+#nav-home.pressed {
+    width: 24px;
+    height: 25px;
+    bottom: 23px;
+    left: 32px;
+}
+#nav-label-home {
+    position: absolute;
+    width: 39px;
+    height: 13px;
+    bottom: 8px;
+    left: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: Quicksand;
+    color: #3e4f45;
+    text-align: center;
+}
+#nav-line-home {
+    position: absolute;
+    bottom: 53px;
+    left: 27px;
+}
+
+/* meditation*/
+#nav-meditation {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    bottom: 23px;
+    left: 103px;
+}
+#nav-meditation.pressed {
+    width: 27px;
+    height: 27px;
+    bottom: 23px;
+    left: 103px;
+}
+#nav-label-meditation {
+    position: absolute;
+    width: 58px;
+    height: 13px;
+    bottom: 8px;
+    left: 87px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: Quicksand;
+    color: #3E4F45;
+    text-align: center;
+}
+#nav-line-meditation {
+    position: absolute;
+    bottom: 53px;
+    left: 99px;
+}
+
+/* track*/
+#nav-tracker {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    bottom: 23px;
+    left: 175px;
+}
+#nav-tracker.pressed {
+    width: 27px;
+    height: 27px;
+    bottom: 23px;
+    left: 175px;
+}
+#nav-label-tracker {
+    position: absolute;
+    width: 38px;
+    height: 13px;
+    bottom: 8px;
+    left: 169px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: Quicksand;
+    color: #3E4F45;
+    text-align: center;
+}
+#nav-line-tracker {
+    position: absolute;
+    bottom: 53px;
+    left: 170px;
+}
+
+/* reflect*/
+#nav-reflect {
+    position: absolute;
+    width: 24px;
+    height: 26px;
+    bottom: 23px;
+    left: 240px;
+}
+#nav-reflect.pressed {
+    width: 24px;
+    height: 26px;
+    bottom: 23px;
+    left: 240px;
+}
+#nav-label-reflect {
+    position: absolute;
+    width: 42px;
+    height: 13px;
+    bottom: 8px;
+    left: 231px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: Quicksand;
+    color: #3E4F45;
+    text-align: center;
+}
+#nav-line-reflect {
+    position: absolute;
+    bottom: 53px;
+    left: 234px;
+}
+
+/* game*/
+#nav-games {
+    position: absolute;
+    width: 31px;
+    height: 25px;
+    bottom: 23px;
+    left: 302px;
+}
+#nav-games.pressed {
+    width: 31px;
+    height: 25px;
+    bottom: 23px;
+    left: 302px;
+}
+#nav-label-games {
+    position: absolute;
+    width: 38px;
+    height: 13px;
+    bottom: 10px;
+    left: 298px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: Quicksand;
+    color: #3E4F45;
+    text-align: center;
+}
+#nav-line-games {
+    position: absolute;
+    bottom: 53px;
+    left: 300px;
+}
