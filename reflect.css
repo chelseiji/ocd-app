@@ -380,6 +380,17 @@ Adjusted with AI for the needs of my project */
     z-index: 2;
 }
 
+.journals-divider {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 180px;
+    left: 0;
+    border-top: 1px solid #BBA892;
+    z-index: 4;
+}
+
+/* added padding sicne the top of the remove icon was getting cut off */
 #journals-list {
     position: absolute;
     width: 100%;
@@ -388,6 +399,9 @@ Adjusted with AI for the needs of my project */
     left: 0;
     z-index: 2;
     overflow-y: auto;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    box-sizing: border-box;
 }
 
 .journal-entry-image {

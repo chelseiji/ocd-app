@@ -75,9 +75,9 @@ function getTextPixels(text, width, height) {
     lines.push(currentLine);
 
     var lineHeight = 24;
-    var startY = height / 2 - (lines.length * lineHeight) / 2 + lineHeight / 2;
+    var startY = 10;
     for (var j = 0; j < lines.length; j++) {
-        octx.fillText(lines[j], width / 2, startY + j * lineHeight);
+        octx.fillText(lines[j], 10, startY + j * lineHeight);
     }
 
     var data = octx.getImageData(0, 0, width, height).data;
@@ -92,7 +92,7 @@ function getTextPixels(text, width, height) {
     }
     return pixels;
 }
-
+// (# AI 2) Written with help of AI
 function spawnDissolveParticles(text) {
     var pixels = getTextPixels(text, dissolveCanvas.width, dissolveCanvas.height);
     dissolveParticles = pixels.map(function(p) {
@@ -259,6 +259,7 @@ function drawEraseText(text) {
     }
 }
 
+// (# AI 4) Written with help of AI
 function eraseAt(x, y) {
     eraseCtx.globalCompositeOperation = 'destination-out';
     eraseCtx.beginPath();
@@ -376,10 +377,7 @@ function sendThought() {
 
 // Journal Pages - different from reflect 
 
-
-
 // basically the same as profile upload but instead replaces the placeholder image
-
 var journalImageUpload = document.getElementById('journal-image-upload');
 var journalImageBox = document.getElementById('journal-image-box');
 

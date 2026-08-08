@@ -1,7 +1,7 @@
 console.log('using app');
 
 
-var notVisible = ['loading-screen', 'onboarding1', 'onboarding2', 'onboarding3', 'onboarding4', 'authentication', 'registration', 'signin', 'termsandconditions', 'account-setup', 'prehome-loading', 'meditation-session','meditation-timer'];
+var notVisible = ['loading-screen', 'onboarding1', 'onboarding2', 'onboarding3', 'onboarding4', 'authentication', 'registration', 'signin', 'termsandconditions', 'account-setup', 'prehome-loading', 'meditation-session','meditation-timer', 'read-journal-1', ];
 
 //Changes the screen of the app thats active 
 function showScreen(screenNumber){
