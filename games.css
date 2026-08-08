@@ -1,6 +1,5 @@
 /* CSS for the games pages */
-/* ===== GAMES PAGE ===== */
-
+/* Games Page */
 .games-title {
     position: absolute;
     width: 111px;
@@ -91,4 +90,17 @@
 
 .games-play-button:active {
     background-color: #BBA892;
+}
+
+
+/* Has the video play in the beackground as the game would work*/
+
+.game-background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
 }

@@ -816,6 +816,39 @@
 
         </div>
 
+        <!-- Balloon Pop Game Page -->
+        <div id="balloon-pop" class="screen">
+            <!-- StackOverflow : Play infinitely looping video on-load in HTML5 -->
+            <video class="game-background-video" autoplay muted loop  playsinline>
+                <source src="videos/BalloonPopVisual.mp4" type="video/mp4">
+            </video>
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="showScreen('games')">
+
+        </div>
+
+
+         <!-- Spin Game Page -->
+         <div id="spin" class="screen">
+            <!-- StackOverflow : Play infinitely looping video on-load in HTML5 -->
+            <video class="game-background-video" autoplay muted loop  playsinline>
+                <source src="videos/SpinVideo.mp4" type="video/mp4">
+            </video>
+
+            <img class="back-button" src="images/back-icon.svg" alt="back button"
+                onmousedown="this.src='images/back-icon-pressed.svg'"
+                onmouseup="this.src='images/back-icon.svg'"
+                ontouchstart="this.src='images/back-icon-pressed.svg'"
+                ontouchend="this.src='images/back-icon.svg'"
+                onclick="showScreen('games')">
+
+        </div>
+
         <!-- Compulsion Tracker Page -->
         <div id="tracker" class="screen" data-nav="tracker">
 
